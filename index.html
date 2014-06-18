@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="zh-cn"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>湘雅二医院PET-CT中心——电子病历系统</title>
+	<link rel="shortcut icon" href="imgs/logo20.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="login-page">
+    	<div id="header" class="clearfix">
+    	</div>
+    	<div id="content" class="col-sm-12 clearfix">
+    		<div id="login-frame" class="container col-sm-6 center">
+    			<h3 class="col-xs-offset-2">登 录</h3>
+    			<form action="table.html" class="horizontal mt"> 
+    				<div class="form-group">
+    					<div class="input-group col-xs-offset-2  col-xs-8">
+    						<input type="text" name="user.username" placeholder="用户名" class="form-control">
+    						<span class="input-group-addon glyphicon glyphicon-user"></span>
+    					</div>
+    				</div>
+    				<div class="form-group">
+    					<div class="input-group col-xs-offset-2 col-xs-8">
+    						<input type="password" name="user.password" placeholder="密码" class="form-control">
+    						<span class="input-group-addon glyphicon glyphicon-lock"></span>
+    					</div>
+    				</div>
+    				<div class="form-group">
+    					<div class="input-group col-xs-offset-2 col-xs-8">
+    						<input type="text" name="validate" placeholder="验证码" class="form-control">
+    						<a href="#" class="input-group-addon validate" onclick="loadImage();" ><img src="imgs/validate.png" height="32" alt="验证码"></a>
+    					</div>
+    				</div>
+    				<div class="form-group col-xs-offset-2 col-sm-offset-4 col-sm-3 col-xs-8">
+    					<div class="">
+    						<input type="submit" value="登 录" class="btn btn-primary  btn-block">
+    					</div>
+    				</div>
+    				<div class="form-group col-sm-3 col-xs-offset-2 col-sm-offset-0 col-xs-8">
+    					<div class="">
+    						<input type="reset" value="重 置" class="btn btn-default  btn-block">
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    	<div id="footer" class="mt">
+    	</div>
+
+    	<!-- scripts here -->
+    	<script src="js/jquery-1.10.2.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	<script type="text/javascript" language="javascript" src="js/common.js"></script>
+    	<!-- external scripts -->
+    	<script type = "text/javascript">
+    	window.$ && $(function() {
+    		$('#header').load("header.html");
+    		$('#footer').load("footer.html");
+
+    	});
+    	function loadImage(){
+
+    	}
+    	</script>
+    </body>
+    </html>
