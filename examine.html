@@ -1,7 +1,29 @@
----
-layout: default
-title: PET-CT中心——诊断报告
----
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="zh-cn"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PET-CT中心——诊断报告</title>
+	<link rel="shortcut icon" href="imgs/logo20.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+       <div id="header" class="clearfix">
+       </div>
+       <div id="content" class="col-sm-12 clearfix">
           <div id="page-path">
              <a href="table.html">首页</a> &gt <a href="#">PET诊断报告</a>
          </div>
@@ -69,3 +91,23 @@ title: PET-CT中心——诊断报告
         </div>
 
     </div>
+</div>
+<hr>
+<div id="footer" class = "mt"></div>
+
+<!-- scripts here -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" language="javascript" src="js/common.js"></script>
+<!-- external scripts -->
+<script type = "text/javascript">
+window.$ && $(function() {
+      //alert(2.5>stds[0].split('~')[0]);
+      $('#header').load("header.html");
+      $('#footer').load("footer.html");
+      dhDiv("#patientBasicInfo");
+  });
+
+</script>
+</body>
+</html>
