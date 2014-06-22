@@ -1,0 +1,231 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="zh-cn"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="zh-cn"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PET-CT中心——用户管理</title>
+	<link rel="shortcut icon" href="imgs/logo20.png">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="validator/jquery.validator.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+    	<div id="header" class="clearfix">
+    	</div>
+    	<div id="content" class="col-sm-12 clearfix"><!-- 
+    		<div id="pagePath">
+    			<a href="#">用户管理</a>
+    		</div> -->
+    		<div class="pt">
+    			<a class="btn btn-primary pull-right mt-20"  data-toggle="modal" data-target="#userModal"><span class="glyphicon glyphicon-plus"></span> 添加用户</a>
+    			<h3>用户管理</h3>
+    			<div class="clear"></div>
+
+    			<table class="table table-bordered table-hover table-condensed table-striped mt datatable">
+    				<thead>
+    					<tr class="success">
+    						<th>用户名</th>
+    						<th>密码</th>
+    						<th>姓名</th>
+    						<th>权限</th>
+    						<th>操作</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td>username1</td>
+    						<td>password1</td>
+    						<td>吴嘉</td>
+    						<td>管理员</td>
+    						<td>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="#">编辑</a></li><li><a href="#" class="delUser" target="_blank">删除</a></li></ul></div>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>username2</td>
+    						<td>password2</td>
+    						<td>姚亦韬</td>
+    						<td>管理员</td>
+    						<td>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="#">编辑</a></li><li><a href="#" class="delUser" target="_blank">删除</a></li></ul></div>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>username3</td>
+    						<td>password3</td>
+    						<td>关培源</td>
+    						<td>管理员</td>
+    						<td>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="#">编辑</a></li><li><a href="#" class="delUser" target="_blank">删除</a></li></ul></div>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>username4</td>
+    						<td>password4</td>
+    						<td>杨帆</td>
+    						<td>管理员</td>
+    						<td>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="#">编辑</a></li><li><a href="#" class="delUser" target="_blank">删除</a></li></ul></div>
+    						</td>
+    					</tr>
+    					<tr>
+    						<td>username5</td>
+    						<td>password5</td>
+    						<td>某某</td>
+    						<td>普通用户</td>
+    						<td>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="#">编辑</a></li><li><a href="#" class="delUser" target="_blank">删除</a></li></ul></div>
+    						</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    		</div>
+    	</div>
+    	<hr>
+    	<div class="modal fade" id="userModal" role="dialog" aria-hidden="true" aria-labelledby="patientModalLabel">
+    		<div class="modal-dialog modal-content">
+    			<div class="modal-header">
+    				<div class="close" data-dismiss="modal">&times;</div>
+    				<h4 class="modal-title" aria-hidden="true" id="patientModalLabel">患者详细信息</h4>
+    			</div>
+    			<div class="modal-body">
+    				<form action="" method="post" id="userAddForm" class="form-horizontal">
+    					<div class="form-group">
+    						<label class="control-label col-sm-3" for="username">用户名</label>
+    						<div class="col-sm-6">
+    							<input type="text" name="user.username" class="form-control" id="username" value="" placeholder="username">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label class="control-label col-sm-3" for="password">密码</label>
+    						<div class="col-sm-6">
+    							<input type="password" name="user.password" class="form-control" id="password" value="">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label class="control-label col-sm-3" for="cfmpwd" >确认密码</label>
+    						<div class="col-sm-6">
+    							<input type="password" class="form-control" id="cfmpwd" value="">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label class="control-label col-sm-3" for="name">姓名</label>
+    						<div class="col-sm-6">
+    							<input type="text" name="user.name" class="form-control" id="name" value="" placeholder="name">
+    						</div>
+    					</div>
+    					<div class="form-group">
+    						<label class="control-label col-sm-3" for="power">权限</label>
+    						<div class="col-sm-6">
+    							<select type="text" name="" class="form-control" id="power">
+    								<option value="0">普通用户</option>
+    								<option value="1">管理员</option>
+    							</select>
+    						</div>
+    					</div>
+
+    				</form>
+    			</div>
+    			<div class="modal-footer">
+    				<button class="btn btn-primary" type="button" onclick="$('#userAddForm').submit();">提 交</button>
+    				<button class="btn btn-default" data-dismiss="modal">取 消</button>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div id="footer" class = "mt"></div>
+
+    	<!-- scripts here -->
+    	<script src="js/jquery-1.10.2.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="validator/jquery.validator.js"></script>
+    	<script type="text/javascript" src="validator/local/zh_CN.js"></script> 
+    	<!-- 以下插件为测试所用 -->
+    	<script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+    	<script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.js"></script>
+    	<!-- external scripts -->
+    	<script type = "text/javascript">
+    	window.$ && $(function() {
+
+    		$('#header').load("header.html");
+    		$('#footer').load("footer.html");
+
+    		$(".delUser").click(function(event) {
+    			/* Act on the event */
+    			event.preventDefault();
+    			var username = $(this).closest('tr').children('td:eq(0)').text();
+    			if (confirm("您确定要删除" + username + "吗？")) {
+    				alert("删除成功！")
+    			};
+    		});
+
+			//验证初始化
+			$('#userAddForm').validator({
+				theme: 'yellow_right_effect',
+				stopOnError: false,
+				timely: 2,
+				fields: { //这里通过name标识
+					'user.username': {
+						rule: '用户名: required; length[6~18]; ',/*remote[ajaxUser_checkUnique.action, user.password]*/
+						//范围中的参数可以写成[x][x~][~x][x~y]的形式
+						tip: '请输入标题（6~18个字符）。'
+					},
+					'user.password': {
+						rule: '密码:required; length[6~18]',
+						tip: '请输入密码（6~18个字符）。'
+					},
+					'#cfmpwd': {
+						rule: '确认密码: required;match(user.password);',
+						tip: '两次密码需要一致。',
+						msg: {
+							match: '两次密码输入不一致！'
+						}
+					},
+					'user.name': {
+						rule: '姓名: required;',
+						tip: '请输入姓名。'
+					}
+				}
+			});
+		
+
+    		$('.datatable').dataTable({
+    			"sDom": "<'row'<'col-sm-6 mt'l><'col-sm-4 pull-right mt'f>r>t<'row'<'col-sm-12'i><'col-sm-12 center'p>>",
+    			"oLanguage": {
+    				"sLengthMenu": "每页显示 _MENU_ 条记录",
+    				"sZeroRecords": "抱歉， 没有找到",
+    				"sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+    				"sInfoEmpty": "没有数据",
+    				"sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+    				"sSearch": "搜索:",
+    				"oPaginate": {
+    					"sFirst": "首页",
+    					"sPrevious": "前一页",
+    					"sNext": "后一页",
+    					"sLast": "尾页"
+    				},
+    				"bFilter": true, //过滤功能
+    				"bSort": true, //排序功能
+    				"bInfo": false, //页脚信息
+    				"bAutoWidth": true //自动宽度
+    			}
+    		});
+
+    	});
+</script>
+
+<script type="text/javascript" language="javascript" src="js/common.js"></script>
+</body>
+</html>

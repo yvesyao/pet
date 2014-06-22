@@ -10,7 +10,8 @@ hr {
 	border-bottom: 1px #aaa solid;
 }
 hr.pink {
-	border-bottom: 10px #dc3c70 solid;
+	border: none;
+	border-bottom: 5px #dc3c70 solid;
 	margin: 0;
 }
 div.center, p.center, img.center, table.center {
@@ -52,9 +53,10 @@ display: block;
 }
 
 /* login */
-.login-page .sidebar-footer, .login-page #topBar {
-	display: none;
-	visibility: hidden;
+.login-page .sidebar-footer, .login-page #topBar, .login-page .navbar-toggle, .login-page #pet-menu-collapse
+{
+	display: none !important;
+	visibility: hidden !important;
 }
 
 #login-frame {
@@ -82,17 +84,13 @@ th[class*=sorting]:hover{
 /* overall */
 #header{
 	background-color: #00797C;
-	padding: 1em 0;
 	position: relative;
+	border-bottom: 1px #00696c solid;
 }
-#topBar {
-	margin-top: -0.8em;
-	text-align: right;
-	padding-right: 1em;
-}
-#topBar a {
-	color: #fff;
-	margin: 0.2em 0.5em;
+#header .middle-hr {
+	border-top: #00696c 1px solid;
+	border-bottom: #00898c 1px solid;
+	margin: 0;
 }
 #page-logo {
 	margin: 0 10px;	
@@ -103,7 +101,7 @@ th[class*=sorting]:hover{
 #page-title{
 	border: none;
 	color: #fff;
-	margin: 1em;
+	margin: 1em 0;
 }
 #page-title .cn{
 	height: 35px;
@@ -130,24 +128,70 @@ th[class*=sorting]:hover{
 	background-color: #dc3c70;
 	font-size: 25px;
 	padding: 0 1em 0 0.5em;
-	position: absolute;
+	margin-right: -31px;
+	/* position: absolute;
 	margin-top: -25px;
-	top: 50%;
-	right: 0;
+	top: 50%; */
 	line-height: 50px;
 	color: white;
 	box-shadow: 1px 1px 10px #444;
 }
 #content {
 	float: none;
-	padding: 1em;
+/* 	padding: 1em; */
 	min-height: 600px;
 	margin: 0 auto;
 	max-width: 1080px;
 }
-#page-path {
+#pagePath {
 	line-height: 3em;
 	border-bottom: 1px #aaa solid;
+}
+
+nav.navbar {
+	margin-bottom: 0;
+}
+
+nav .navbar-nav.menu li {
+	margin: 0 0.5em;
+}
+
+nav .navbar-nav li.active {
+	border-bottom: #eee 2px solid;
+}
+
+
+nav .navbar-nav a {
+	height: 2em;
+	line-height: 2em;
+	padding: 0 1em;
+	color: #fff;
+}
+
+nav .navbar-nav a:hover {
+	background: rgba(255,255,255,0.1);
+}
+
+.navbar-nav.navbar-right:last-child {
+	margin-right: 2em;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+
+.navbar .nav .open>a, .navbar .nav .open>a:hover, .navbar .nav .open>a:focus {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-nav>li>.dropdown-menu {
+	margin-top: 2px;
+	background-color: rgba(220, 60, 112, 0.8);/* 0, 121, 124 */
+}
+
+.navbar-nav>li>.dropdown-menu a:hover {
+	color: #fff;
+	background-color: rgba(20, 20, 20, 0.1);
 }
 
 #footer {
@@ -187,9 +231,8 @@ th[class*=sorting]:hover{
 	margin-right: 1em;
 }
 .site-info {
-	margin: 0 auto;
+	margin: 30px auto;
 	max-width: 1040px;
-	padding: 30px 0;
 	width: 100%;
 	color: #999;
 }
