@@ -53,7 +53,7 @@ display: block;
 }
 
 /* login */
-.login-page .sidebar-footer, .login-page #topBar, .login-page .navbar-toggle, .login-page #pet-menu-collapse
+.login-page .sidebar-footer, .login-page #topBar, .login-page .navbar-toggle, .login-page #pet-menu-collapse, .login-page .middle-hr
 {
 	display: none !important;
 	visibility: hidden !important;
@@ -127,7 +127,7 @@ th[class*=sorting]:hover{
 #page-sub-title {
 	background-color: #dc3c70;
 	font-size: 25px;
-	padding: 0 1em 0 0.5em;
+	padding: 0 0.5em;
 	margin-right: -31px;
 	/* position: absolute;
 	margin-top: -25px;
@@ -147,6 +147,7 @@ th[class*=sorting]:hover{
 	line-height: 3em;
 	border-bottom: 1px #aaa solid;
 }
+
 
 nav.navbar {
 	margin-bottom: 0;
@@ -172,12 +173,20 @@ nav .navbar-nav a:hover {
 	background: rgba(255,255,255,0.1);
 }
 
-.navbar-nav.navbar-right:last-child {
+.navbar-nav.navbar-right.menu {
 	margin-right: 2em;
+}
+
+#pet-menu-collapse.in, #pet-menu-collapse.collapsing {
+	border: none;
+}
+.navbar-toggle {
+	margin: 8px 0 8px 15px;
 }
 
 .navbar-toggle .icon-bar {
 	background-color: #fff;
+	box-shadow: inset 1px 1px 2px #999;
 }
 
 .navbar .nav .open>a, .navbar .nav .open>a:hover, .navbar .nav .open>a:focus {
