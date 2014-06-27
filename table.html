@@ -28,7 +28,7 @@
 			<a href="#">首页</a>
 		</div>
 		<div class="pt">
-			<a href="addRecord.html" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right mt-20"><span class="glyphicon glyphicon-plus"></span> 添加病历</a>
+			<a href="addRecord.html" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right mt-20 hidden-xs"><span class="glyphicon glyphicon-plus"></span> 添加病历</a>
 			<h3>电子病历概览</h3>
 			<div class="clear"></div>
 			<!-- (tr.success>td{234711$$$}+td{科室$}+td{100$$$}+td{患者$}+td{男}+td{2$}+td{19$$-$$-$$}+td{湖南}+td{淋巴瘤}+td{淋巴瘤}+td{<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="">CRF表</a></li></ul></div>})*20 -->
@@ -361,7 +361,7 @@
             <h4 class="modal-title" aria-hidden="true" id="patientModalLabel">患者详细信息</h4>
         </div>
         <div class="modal-body">
-            <div class="clearfix">
+            <div class="clearfix hidden-xs">
             	<button class="btn btn-primary pull-right" id="patientEditBtn"><span class="glyphicon glyphicon-edit"></span> 编辑</button>
             </div>
             <form action="" method="post" class="form-horizontal">
@@ -497,7 +497,7 @@
 		$('#footer').load("footer.html");
 
 		$('.datatable').dataTable({
-			"sDom": "<'row'<'col-sm-6 mt'l><'col-sm-4 pull-right mt'f>r>t<'row'<'col-sm-12'i><'col-sm-12 center'p>>",
+			"sDom": "<'row'<'col-sm-6 hidden-xs mt'l><'col-sm-4 pull-right mt'f>r>t<'row'<'col-sm-12'i><'col-sm-12 center'p>>",
 			"oLanguage": {
 				"sLengthMenu": "每页显示 _MENU_ 条记录",
 				"sZeroRecords": "抱歉， 没有找到",

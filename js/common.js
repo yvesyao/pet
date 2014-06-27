@@ -14,25 +14,19 @@ window.$ && $(function() {
 });
 
 function dhDiv(ee1) {
-    //导航距离屏幕顶部距离 
-    var _defautlTop = $(ee1).offset().top;
+    var _new = $(ee1).clone();
+    _new.addClass('topFixed').hide();
+    $(ee1).after(_new);
     //鼠标滚动事件 
     $(window).scroll(function() {
-        //导航距离屏幕左侧距离 
-        var _defautlLeft = $(ee1).offset().left - $(window).scrollLeft();
-        //导航默认样式记录，还原初始样式时候需要 
-        var _left = $(ee1).css('left');
-        var _width = $(ee1).outerWidth();
-        if ($(this).scrollTop() > _defautlTop) {
-            $(ee1).css({
-                'left': _defautlLeft,
-                'width': _width
-            }).addClass('topFixed');
+        if ($(this).scrollTop() > $(ee1).offset().top) {
+            if (_new.is(':visible')) return;
+            _new.css({
+                'left': $(ee1).offset().left - $(window).scrollLeft(),
+                'width': $(ee1).outerWidth()
+            }).show();
         } else {
-            $(ee1).css({
-                'left': _left,
-                'width': 'auto'
-            }).removeClass('topFixed');
+            _new.hide();
         }
     });
 }

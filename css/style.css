@@ -15,10 +15,10 @@ hr.pink {
 	margin: 0;
 }
 div.center, p.center, img.center, table.center {
-margin-left: auto !important;
-margin-right: auto !important;
-float: none !important;
-display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none !important;
+	display: block;
 }
 .pt {
 	padding-top: 1em;
@@ -90,7 +90,7 @@ th[class*=sorting]:hover{
 #header .middle-hr {
 	border-top: #00696c 1px solid;
 	border-bottom: #00898c 1px solid;
-	margin: 0;
+	margin: 0.5em 0 0 0;
 }
 #page-logo {
 	margin: 0 10px;	
@@ -138,7 +138,7 @@ th[class*=sorting]:hover{
 }
 #content {
 	float: none;
-/* 	padding: 1em; */
+	/* 	padding: 1em; */
 	min-height: 600px;
 	margin: 0 auto;
 	max-width: 1080px;
@@ -177,6 +177,9 @@ nav .navbar-nav a:hover {
 	margin-right: 2em;
 }
 
+#pet-menu-collapse {
+	box-shadow: none;
+}
 #pet-menu-collapse.in, #pet-menu-collapse.collapsing {
 	border: none;
 }
@@ -219,63 +222,71 @@ nav .navbar-nav a:hover {
 #footer .contact {
 	padding-left: 1em;
 	border-left: 1px #aaa solid;
-} */
+	} */
 
-.widget .widget-title {
-	font: 300 20px "微软雅黑",Helvetica,"Heiti SC",sans-serif;
-	margin: 0 0 10px;
-	color: #39727D;
-}
-.widget ol, .widget ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.widget li {
-	list-style: none;
-	padding: 5px 0;
-}
-#linkcat li {
-	display: inline-block;
-	margin-right: 1em;
-}
-.site-info {
-	margin: 30px auto;
-	max-width: 1040px;
-	width: 100%;
-	color: #999;
-}
+	.widget .widget-title {
+		font: 300 20px "微软雅黑",Helvetica,"Heiti SC",sans-serif;
+		margin: 0 0 10px;
+		color: #39727D;
+	}
+	.widget ol, .widget ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.widget li {
+		list-style: none;
+		padding: 5px 0;
+	}
+	#linkcat li {
+		display: inline-block;
+		margin-right: 1em;
+	}
+	.site-info {
+		margin: 30px auto;
+		max-width: 1040px;
+		width: 100%;
+		color: #999;
+	}
 
-/*Patient*/
-#patientModal .form-group span {
-	display: block;
-	margin-top: 7px;
-}
+	/*Patient*/
+	#patientModal .form-group span {
+		display: block;
+		margin-top: 7px;
+	}
 
-/* record */
-#patientBasicInfo span {
-	float: left;
-	width: 25%;
-	padding-left: 2em;
-}
-#patientBasicInfo {
-	border-bottom: 1px solid #ddd;
-	padding: 0.5em 0;
-}
-.topFixed {
-	position: fixed;
-	top: 0;
-	z-index:99999;
-	background-color: #fff;
-}
-.page pre {
-	font-size: 14px;
-	line-height: 2em;
-}
+	/* record */
+	#patientBasicInfo span {
+		padding-left: 2em;
+	}
+	#patientBasicInfo {
+		border-bottom: 1px solid #ddd;
+		padding: 0.5em 0;
+	}
+	.topFixed {
+		position: fixed;
+		top: 0;
+		z-index:99999;
+		background-color: #fff;
+	}
+	.page pre {
+		font-size: 14px;
+		line-height: 2em;
+	}
 /* #patientInfo>div {
 	float: left;
 	padding-right: 6em;
 }
 #patientInfo>div:last-child {
 	padding-right: 0;
-} */
+	} */
+
+
+
+	/* 移动端样式 */
+	@media(max-width:768px) {
+		.page {
+			padding: 0;
+			box-shadow: none;
+		}
+	}
