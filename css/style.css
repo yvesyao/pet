@@ -81,6 +81,9 @@ div.center, p.center, img.center, table.center {
 th[class*=sorting]:hover{
 	cursor: pointer;
 }
+.datatable .dropdown-menu {
+	margin-left: -100px;
+}
 /* overall */
 #header{
 	background-color: #00797C;
