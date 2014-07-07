@@ -180,9 +180,9 @@ nav .navbar-nav a:hover {
 	margin-right: 2em;
 }
 
-button[data-target="#pet-menu-collapse"] {
+/* button[data-target="#pet-menu-collapse"] {
 	padding-top: 1em;
-}
+} */
 
 #pet-menu-collapse {
 	box-shadow: none;
@@ -192,12 +192,13 @@ button[data-target="#pet-menu-collapse"] {
 	border: none;
 }
 .navbar-toggle {
-	margin: 8px 0 8px 15px;
+	margin: 0;
+	padding: 7px;
 }
 
 .navbar-toggle .icon-bar {
 	background-color: #fff;
-	box-shadow: inset 1px 1px 2px #999;
+	box-shadow: 1px 1px 3px #666;
 }
 
 .navbar .nav .open>a, .navbar .nav .open>a:hover, .navbar .nav .open>a:focus {
