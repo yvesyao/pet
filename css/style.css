@@ -120,11 +120,11 @@ th[class*=sorting]:hover{
 #page-title .en{
 	height: 20px;
 	font-size: 17px;
-	letter-spacing: 1px;
-	word-spacing: 1px;
+	letter-spacing: 2px;
+	word-spacing: 4px;
 }
 #page-title .en span{
-	padding-left: 3px;
+	padding-left: 4px;
 }
 
 #page-sub-title {
@@ -180,8 +180,13 @@ nav .navbar-nav a:hover {
 	margin-right: 2em;
 }
 
+button[data-target="#pet-menu-collapse"] {
+	padding-top: 1em;
+}
+
 #pet-menu-collapse {
 	box-shadow: none;
+	padding: 0 30px;
 }
 #pet-menu-collapse.in, #pet-menu-collapse.collapsing {
 	border: none;
@@ -296,5 +301,16 @@ nav .navbar-nav a:hover {
 		.page {
 			padding: 0;
 			box-shadow: none;
+		}
+		#csu-logo {
+			margin-left: 5px; 
+		}
+		#page-title .cn h1{
+			clear: both;
+			margin-top: 5px;
+			font-size: 24px;
+		}
+		#page-title {
+			margin: 0.5em 0 0 0;
 		}
 	}
