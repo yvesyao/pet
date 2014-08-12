@@ -139,6 +139,9 @@ th[class*=sorting]:hover{
 	color: white;
 	box-shadow: 1px 1px 10px #444;
 }
+.frameStyle #content {
+	max-width: 2000px;
+}
 #content {
 	float: none;
 	/* 	padding: 1em; */
@@ -146,10 +149,10 @@ th[class*=sorting]:hover{
 	margin: 0 auto;
 	max-width: 1080px;
 }
-#pagePath {
+/* #pagePath {
 	line-height: 3em;
 	border-bottom: 1px #aaa solid;
-}
+} */
 
 /* navbar */
 nav.navbar {
@@ -217,6 +220,14 @@ nav .navbar-nav a:hover {
 
 .navbar-nav a.dropdown-toggle {
 	background: transparent !important;
+}
+/* menu */
+.bs-docs-sidebar.affix {
+position: fixed;
+top: 20px;
+}
+.bs-docs-sidebar.affix-bottom {
+position: absolute;
 }
 
 /* footer */
