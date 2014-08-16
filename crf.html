@@ -122,7 +122,7 @@
         //子页面跳转
         History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
           var State = History.getState(); // Note: We are using History.getState() instead of event.state
-          $.post(State.url.substring(State.url.indexOf('#') + 1, State.url.length), function(data) {
+          $.post(State.url.substring(State.url.indexOf('?') + 1, State.url.length), function(data) {
             $('#subPage .loading').hide();
             var newTitle = $(data).filter('title').text();
             /*if (newTitle.indexOf("Error") >= 0) { //错误页
@@ -158,12 +158,12 @@
 
       //将新地址写入History
       function changeState(href) {
-        if (window.location.href.split("#")[1] === href) return;
+        if (window.location.href.split("?")[1] === href) return;
         $('#subPage .loading').show();
         /*$.get('ajaxLogin_checkLogin.action', function(data) { //检测是否登录
           if (data.result == '1') {*/
             if (!(!-[1, ] && (!window.XMLHttpRequest || document.documentMode <= 8)))//非ie8及以下
-              History.pushState(null, null, location.href.split("#")[0] + "#" + href);
+              History.pushState(null, null, location.href.split("?")[0] + "?" + href);
             else
               $('#subPage .content').load(href, function() {
                 $('#subPage .loading').hide();
