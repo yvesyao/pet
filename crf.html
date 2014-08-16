@@ -26,83 +26,153 @@
        <ol class="breadcrumb">
         <li><a href="table.html">首页</a></li>
         <li>CRF表</li>
+        <li class="patient">湘雅二医院</li>
+        <li class="patient">科室1</li>
+        <li class="patient">病人1</li>
       </ol>
       <div id="content" class="col-sm-12 clearfix">
-        <div class="col-md-3">
-          <div class="bs-docs-sidebar hidden-print collapse navbar-collapse" id="pet-left-menu" role="complementary">
+        <div class="col-md-3" id="leftMenu">
+          <div class="bs-docs-sidebar hidden-print" id="pet-left-menu" role="complementary">
             <ul class="nav bs-docs-sidenav">
-              <li><a href="#responsive-embed">具有响应式特性的嵌入内容</a></li>
-              <li><a href="#wells">Well</a></li>
-              <li class="active">
-                <a href="#glyphicons">Glyphicons 字体图标</a>
-                <ul class="nav">
-                  <li><a href="#glyphicons-glyphs">所有可用的图标</a></li>
-                  <li><a href="#glyphicons-how-to-use">如何使用</a></li>
-                  <li><a href="#glyphicons-examples">实例</a></li>
+              <li class="active" id="patientInfo-p">
+                <a data-toggle="collapse" data-parent="#patientInfo-p" href="#patientInfo">病历信息</a>
+                <ul class="nav collapse" id="patientInfo">
+                  <li><a href="http://www.baidu.com">基本信息</a></li>
+                  <li><a href="table.html">病案单</a></li>
                 </ul>
               </li>
-              <li><a href="#responsive-embed">具有响应式特性的嵌入内容</a></li>
-              <li><a href="#wells">Well</a></li> 
+              <li class="active" id="feiai-p">
+                <a data-toggle="collapse" data-parent="#feisi-p" href="#feiai">肺癌</a>
+                <ul class="nav collapse" id="feiai">
+                  <li><a href="#">指标1</a></li>
+                  <li><a href="#">指标2</a></li>
+                  <li><a href="#">指标3</a></li>
+                </ul>
+              </li>
+              <li class="active" id="weiai-p">
+                <a data-toggle="collapse" data-parent="#weiai-p" href="#weiai">胃癌</a>
+                <ul class="nav collapse" id="weiai">
+                  <li><a href="#">指标1</a></li>
+                  <li><a href="#">指标2</a></li>
+                  <li><a href="#">指标3</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
 
         </div>
-        <div class="col-md-9">
-          <div class="page center clearfix">
-            <h3 class="text-center mb-20">PET诊断报告</h3>
-            <div class="clear"></div>
-            <div id="patientBasicInfo" class="clearfix">
-              <span class="col-sm-3">姓名：段炜</span>
-              <span class="col-sm-3 hidden-xs">年龄：24</span>
-              <span class="col-sm-3">检查子类：PET-CT(全身)</span>
-              <span class="col-sm-3 hidden-xs">申请日期：2014-06-09</span>
+        <div class="col-md-9" id="subPage">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <ol class="breadcrumb">
+                <li>病历信息</li>
+                <li>CRF表</li>
+              </ol>
             </div>
-            <div id="findings" class="col-sm-12 mt">
-              <h4>检查所见</h4>
-  <!-- <div class="col-sm-6">
-          <label>阴阳性：</label>
-          <div class="clear"></div>
-          <div class="col-sm-8">
-              <label for="negative" class="radio-inline"><input type="radio" name="ri" id="negative" readonly>阴性</label>
-              <label for="positive" class="radio-inline"><input type="radio" name="ri" id="positive" readonly>阳性</label>
-              <label for="unsure" class="radio-inline"><input type="radio" name="ri" id="unsure" readonly>不确定</label>
+            <div class="panel-body">
+              <div class="content zoom">
+                dfgjhfgafgaksjhfasjkfhsdakjfhsadkjh
+              </div>
+              <div class="loading zoom" style="display: none;">
+                <div class="img">
+                  <span style="color: #222; line-height:19px;">加载中。。。</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div> -->
-        <div class="col-xs-6"><p>阴阳性：阳性</p></div>
-        <div class="col-xs-6"><p>符合率：不确定</p></div>
-        <div class="clear"></div>
-        <pre><p>&#12288;&#12288;空腹6小时以上,静脉注射显像剂,平静休息6MIN后行全身PET及CT断层显像,PET图像行衰减校正及迭代重建,PET,CT图像行多层面,多幅显示.影像清晰.大脑中线居中,大脑各叶皮质放射性分布基本对称,规律,未见放射性异常浓聚影或稀疏秋缺损影；双侧基底神经节,丘脑及双侧小脑放射性分布未见明显异常；白质区及脑室区未见明显扩大.</p><p>&#12288;&#12288;甲状腺左侧叶低密度影,边界尚清,大小约1.5*1.4CM,边缘见点状钙化,轻度放射性摄取,SUVmax为1.6；颌面部及颈部软组织显像清晰,未见异常密度影,放射性分布未见异常.</p><p>&#12288;&#12288;纵隔血管前间隙见索条影,未见明显异常放射性浓聚；左肺下叶外基底段索条影,未见明显异常放射性浓聚；右肺野清晰,放射性分布未见明显异常；心脏大血管正常显影；纵隔内未见明显肿大淋巴结,放射性分布未见异常.</p><p>&#12288;&#12288;胃术后,局部见多发高密度吻合器影,未见明显异常放射性浓聚；肝脏形态,大小,密度未见异常,放射性分布未见明显异常；胰腺区显影清晰；双肾及双侧输尿管显影清晰,左侧肾上腺内,外侧肢结节状增粗,未见明显异常放射性浓聚；</p><p>&#12288;&#12288;腹部见多个形态不一正常肠管影,放射性分布未见异常；前列腺大小约5.4*3.4cm,放射性公布未见明显异常；膀胱显影清晰,壁不厚；腹股沟未见明显肿大淋巴结.</p><p>&#12288;&#12288;股骨颈短缩,见高密度固定物,未见明显异常放射性浓聚；左侧第3,4肋骨变形,第5肋骨密度增高,未见明显异常放射性浓聚；颈3,颈4,颈5椎体骨质增生；全身骨骼放射性分布未见明显异常.余无特殊.</p></pre>
+          <!-- 
+          <div id="subContent" class="clearfix">
+          
+          
+          
+          </div> -->
+        </div>
+
       </div>
 
+      <hr>
+      <div id="footer" class = "mt clearfix"></div>
 
-    </div>
-  </div>
+      <!-- scripts here -->
+      <script src="js/jquery-1.10.2.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/jquery.history.js"></script>
+      <!-- external scripts -->
+      <script type = "text/javascript">
+      window.$ && $(function() {
 
-</div>
+        //顶部栏和底部栏的载入，菜单的affix配置
+        $('#header').load("header.html", function() {
+          $('#footer').load("footer.html", function() {
+            $('.bs-docs-sidebar').affix({
+              offset: {
+                top: $('#header').outerHeight(true) + $('.breadcrumb').outerHeight(true),
+                bottom: function() {
+                  return (this.bottom = $('#footer').outerHeight(true) + 1);
+                }
+              }
+            });
+          });
+        });
 
-<hr>
-<div id="footer" class = "mt clearfix"></div>
+        //history变量，用于动态加载时地址栏跟着改变
+        var History = window.History,
+          State = History.getState();
 
-<!-- scripts here -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- external scripts -->
-<script type = "text/javascript">
-window.$ && $(function() {
-  $('#header').load("header.html", function() {
-    $('#footer').load("footer.html", function() {
-      $('.bs-docs-sidebar').affix({
-        offset: {
-          top: $('#header').outerHeight(true) + $('.breadcrumb').outerHeight(true) - 20,
-          bottom: function() {
-            return (this.bottom = $('#footer').outerHeight(true))
-          }
-        }
+        //子页面跳转
+        History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
+          var State = History.getState(); // Note: We are using History.getState() instead of event.state
+          $.post(State.url.substring(State.url.indexOf('#') + 1, State.url.length), function(data) {
+            $('#subPage .loading').hide();
+            var newTitle = $(data).filter('title').text();
+            /*if (newTitle.indexOf("Error") >= 0) { //错误页
+              $('head').remove();
+              $('body').html(data);
+              return;
+            }*/
+            /*if ($(data).filter('meta[name="login"]').attr('content') == 'login') {
+              window.location.href = "<%=basePath%>";
+              return;
+            }*/
+            $('title').text(newTitle);
+            $('.subPage .panel-body .content').html(data);
+            /*footerAdjust();
+            subReady();*/
+          });
+        });
+        $('#leftMenu ul a').not('[data-parent]').click(function(event) {
+          /* Act on the event */
+          event.preventDefault();
+          var _node = $(this);
+          var _path = '';
+          do {
+            _path = '<li>' + _node.text() + '</li>' + _path;
+            _node = _node.parent().parents('li').children('a');
+          } while (_node.length != 0);
+          $('#subPage .panel-heading .breadcrumb').html(_path);
+          $('#leftMenu').children('li').removeClass('active');
+          $(this).parent('li').addClass('active');
+          changeState($(this).attr('href'));
+        });
       });
-    });
-  });
-});
 
+      //将新地址写入History
+      function changeState(href) {
+        if (window.location.href.split("#")[1] === href) return;
+        $('#subPage .loading').show();
+        /*$.get('ajaxLogin_checkLogin.action', function(data) { //检测是否登录
+          if (data.result == '1') {*/
+            if (!(!-[1, ] && (!window.XMLHttpRequest || document.documentMode <= 8)))//非ie8及以下
+              History.pushState(null, null, location.href.split("#")[0] + "#" + href);
+            else
+              $('#subPage .content').load(href, function() {
+                $('#subPage .loading').hide();
+                //subReady();
+              });
+          /*} else
+            noLogin();
+        });*/
+      }
 </script>
 
 <script type="text/javascript" language="javascript" src="js/common.js"></script>
