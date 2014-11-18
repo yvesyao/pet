@@ -1,10 +1,10 @@
 body {
-	font-family: "微软雅黑",Helvetica,"Heiti SC",sans-serif;
+	font-family: "Microsoft Yahei","微软雅黑",Helvetica,"Heiti SC",sans-serif;
 	font-size: 14px;
 	background: #fff;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
-	font-family: "微软雅黑",Helvetica,"Heiti SC",sans-serif;
+	font-family: "Microsoft Yahei","微软雅黑",Helvetica,"Heiti SC",sans-serif;
 }
 hr {
 	border-bottom: 1px #aaa solid;
@@ -35,6 +35,9 @@ div.center, p.center, img.center, table.center {
 .mb-20 {
 	margin-bottom: 20px;
 }
+.mb-15 {
+	margin-bottom: 15px;
+}
 .gray-border {
 	border: gray 1px solid;
 }
@@ -55,6 +58,7 @@ div.center, p.center, img.center, table.center {
 }
 .page {
 	max-width: 1000px;
+	margin: 1em 0;
 	padding: 4em 5em;
 	box-shadow: 5px 5px 15px #888;
 	border: #ddd 1px solid;
@@ -68,7 +72,7 @@ div.center, p.center, img.center, table.center {
 }
 
 #login-frame {
-	margin-top: 80px;
+	margin: 80px 0;
 	padding: 10px 0 30px 0;
 	color: #333;
 	background: rgba(255, 255, 255, 0.4);
@@ -84,6 +88,12 @@ div.center, p.center, img.center, table.center {
 .input-group-addon.validate img {
 	border-radius: 0 4px 4px 0;
 }
+
+/* menu */
+.btn h2 {
+	margin: 10px 0;
+}
+
 
 /* table */
 th[class*=sorting]:hover{
@@ -117,7 +127,7 @@ th[class*=sorting]:hover{
 #page-title .cn{
 	height: 35px;
 }
-#page-title .cn h1{
+#page-title h1{
 	margin: 0;
 	font-size: 28px;
 	margin-top: -2px;
@@ -147,15 +157,12 @@ th[class*=sorting]:hover{
 	color: white;
 	box-shadow: 1px 1px 10px #444;
 }
-.frameStyle #content {
-	max-width: 2000px;
-}
+
 #content {
 	float: none;
 	/* 	padding: 1em; */
 	min-height: 400px;
 	margin: 0 auto;
-	max-width: 1080px;
 }
 
 
@@ -196,10 +203,6 @@ nav .navbar-nav a:hover {
 #pet-menu-collapse.in, #pet-menu-collapse.collapsing {
 	border: none;
 }
-.navbar-toggle {
-	margin: 0;
-	padding: 7px;
-}
 
 .navbar-toggle .icon-bar {
 	background-color: #fff;
@@ -212,12 +215,14 @@ nav .navbar-nav a:hover {
 
 .navbar-nav>li>.dropdown-menu {
 	margin-top: 1px;
-	background-color: rgba(220, 60, 112, 0.8);/* 0, 121, 124 */
+}
+
+.navbar-nav>li>.dropdown-menu a{
+	color: #333;
 }
 
 .navbar-nav>li>.dropdown-menu a:hover {
-	color: #fff;
-	background: rgba(20, 20, 20, 0.1);
+	color: #000;
 }
 
 .navbar-nav a.dropdown-toggle {
@@ -226,7 +231,6 @@ nav .navbar-nav a:hover {
 
 .breadcrumb .patient {
 	color: #00797C;
-	text-shadow: 1px 1px #ddd;
 }
 .breadcrumb {
 	border-bottom: 1px solid #f0f0f0;
@@ -235,10 +239,10 @@ nav .navbar-nav a:hover {
 
 
 /* frameStyle */
-.frameStyle #content {
+/* .frameStyle #content {
 	padding: 0;
 }
-/* menu */
+menu
 .bs-docs-sidebar.affix {
 	position: fixed;
 	top: 0px !important;
@@ -290,7 +294,7 @@ nav .navbar-nav a:hover {
 
 .bs-docs-sidenav>li>ul a {
 	margin-left: 0.5em;
-	font-size: 80%;
+	font-size: 90%;
 	padding: 7px 15px;
 }
 .bs-docs-sidebar {
@@ -299,12 +303,16 @@ nav .navbar-nav a:hover {
 	z-index: 1000;
 }
 #leftMenu {
-	/* border-right: #f0f0f0 ridge 3px; */
-}
+	border-right: #f0f0f0 ridge 3px;
+} */
 /* subPage */
-#subPage {
-	/* margin-left: -3px;
-	border-left: #f0f0f0 ridge 3px; */
+
+.form-horizontal .form-value {
+	padding-top: 7px;
+}
+/* #subPage {
+	margin-left: -3px;
+	border-left: #f0f0f0 ridge 3px;
 	padding: 0 2em 0 1em;
 }
 #subPage .panel-body {
@@ -321,8 +329,8 @@ nav .navbar-nav a:hover {
 	left: 0;
 }
 #subPage .breadcrumb {
-	/* background-color: #fff;
-	border-radius: 0; */
+	background-color: #fff;
+	border-radius: 0;
 }
 .panel-heading .breadcrumb {
 	background-color: transparent;
@@ -331,7 +339,7 @@ nav .navbar-nav a:hover {
 }
 #subContent {
 	padding: 2em;
-}
+} */
 /* footer */
 #footer {
 	color: #555;

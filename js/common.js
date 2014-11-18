@@ -10,7 +10,6 @@ window.$ && $(function() {
         $(this).attr('data-modal').modal('show');
     });
 
-
 });
 
 function dhDiv(ee1) {

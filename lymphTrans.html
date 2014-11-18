@@ -1,0 +1,462 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h2 class="page-header">淋巴结转移</h2>
+  </div>
+</div>
+<div class="row">
+  
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="#" class="panel-slide-up pull-right"><b class="glyphicon glyphicon-chevron-up"></b></a>
+        <h3 class="panel-title">颈淋巴结转移</h3>
+      </div>
+      <div class="panel-body"> 
+
+        <form action="" method="post" class="form-horizontal">
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="">数目</label>
+            <div class="col-sm-10">
+              <div class="form-value">5</div>
+              <input type="text" name="number" class="form-control hide" value="5">
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">融合</label>
+            <div class="col-sm-10">
+              <div class="form-value">是</div>
+              <label class="radio-inline hide"><input type="radio" name="illPos" id="" checked>是</label>
+              <label class="radio-inline hide"><input type="radio" name="illPos" id="" >否</label>
+
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="SUVmax"></label>
+            <div class="col-sm-10">
+              <div class="col-md-4 mb-15">
+                <label class="control-label">长径</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="length" class="form-control hide" value="5">
+              </div>
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">短径</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="short" class="form-control hide" value="5">
+              </div>
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">高径</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="short" class="form-control hide" value="5">
+              </div>
+
+            </div>
+
+          </div>
+          <!-- /.form-group -->
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">边缘</label>
+            <div class="col-sm-10">
+              <div class="form-value">清楚</div>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>清楚</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不清楚</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">密度</label>
+            <div class="col-sm-10">
+              <div class="form-value">均匀</div>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>均匀</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不均匀</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">更低密度坏死区</label>
+            <div class="col-sm-10">
+              <div class="form-value">是</div>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>是</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" >否</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="SUVmax"></label>
+            <div class="col-sm-10">
+              <div class="col-md-4 mb-15">
+                <label class="control-label">CT值平扫</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="ct-ps" class="form-control hide" value="5">
+              </div>
+
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">CT值增强动脉期</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="ct-zqd" class="form-control hide" value="5">
+              </div>
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">CT值增强静脉期</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="ct-zqj" class="form-control hide" value="5">
+              </div>
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">强化类型</label>
+            <div class="col-sm-10">
+              <div class="form-value">均匀</div>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>均匀</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不均匀</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type">不规则周边</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type">中心强化</label>
+              <label class="radio-inline hide"><input type="radio" name="strengthen-type">环形强化</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-label col-sm-2">糖代谢</label>
+            <div class="col-sm-10">
+              <div class="form-value">增高</div>
+              <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism">不增高</label>
+              <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism" data-toggle="radioSubTrigger" data-target="#glycometabolism" checked>增高</label>
+              <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism">降低</label>
+              <div class="clearfix ignore-hide hide" id="glycometabolism">
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label" for="F-FDG-PET-concentrationType">浓聚类型</label> 
+                  <div class="col-sm-10">
+                    <div class="form-value">均匀浓聚</div>
+                    <div class="radio hide">
+                      <label><input type="radio" name="F-FDG-PET-concentrationType">均匀浓聚</label>
+                    </div>
+                    <div class="radio hide">
+                      <label><input type="radio" name="F-FDG-PET-concentrationType">不均匀浓聚</label>
+                    </div>
+                    <div class="radio hide">
+                      <label><input type="radio" name="F-FDG-PET-concentrationType" checked>不规则周边</label>
+                    </div>
+                    <div class="radio hide">
+                      <label><input type="radio" name="F-FDG-PET-concentrationType" >中心浓聚</label>
+                    </div>
+                    <div class="radio hide">
+                      <label><input type="radio" name="F-FDG-PET-concentrationType" >环形浓聚</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label">SUV最大值</label> 
+                  <div class="form-value">5</div>
+                  <input type="text" name="suv-max" class="form-control hide" value="5">
+                </div>
+
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label">SUV平均值</label> 
+                  <div class="form-value">5</div>
+                  <input type="text" name="suv-avg" class="form-control hide" value="5">
+                </div>
+
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label">T/B</label> 
+                  <div class="form-value">5</div>
+                  <input type="text" name="T/B" class="form-control hide" value="5">
+                </div>
+
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label">延迟SUV最大值</label> 
+                  <div class="form-value">5</div>
+                  <input type="text" name="delay-suv-max" class="form-control hide" value="5">
+                </div>
+
+                <div class="col-md-4 mb-15">
+                  <label class="control-label">延迟SUV平均值</label> 
+                  <div class="form-value">5</div>
+                  <input type="text" name="delay-suv-avg" class="form-control hide" value="5">
+                </div>
+
+              </div>
+              <!-- /#glycometabolism -->
+            </div>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="col-lg-12 hide">
+            <hr>
+            <div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+             <input type="submit" class="btn btn-primary" value="保 存">
+           </div>
+           <div class="col-sm-2">
+             <button class="btn btn-default edit-cancle">取 消</button>
+           </div>
+         </div>
+       </form>
+       
+     </div>
+     <!--/.panel-body-->
+   </div>
+   <!--/.panel-->
+
+   <div class="panel panel-default add-template hide">
+    <div class="panel-heading">
+      <a href="#" class="panel-slide-up pull-right"><b class="glyphicon glyphicon-chevron-up"></b></a>
+      <h3 class="panel-title">
+        <select class="val-input">
+          <option value="01淋巴结转移">01淋巴结转移</option>
+          <option value="02淋巴结转移">02淋巴结转移</option>
+          <option value="03淋巴结转移">03淋巴结转移</option>
+          <option value="04淋巴结转移">04淋巴结转移</option>
+          <option value="05淋巴结转移">05淋巴结转移</option>
+          <option value="06淋巴结转移">06淋巴结转移</option>
+          <option value="07淋巴结转移">07淋巴结转移</option>
+          <option value="08淋巴结转移">08淋巴结转移</option>
+          <option value="09淋巴结转移">09淋巴结转移</option>
+          <option value="10淋巴结转移">10淋巴结转移</option>
+          <option value="11淋巴结转移">11淋巴结转移</option>
+          <option value="12淋巴结转移">12淋巴结转移</option>
+          <option value="13淋巴结转移">13淋巴结转移</option>
+          <option value="14淋巴结转移">14淋巴结转移</option>
+          <option value="15淋巴结转移">15淋巴结转移</option>
+        </select>
+      </h3>
+    </div>
+    <div class="panel-body">
+
+      <form action="" method="post" class="form-horizontal">
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="">数目</label>
+          <div class="col-sm-10">
+            <div class="form-value">5</div>
+            <input type="text" name="number" class="form-control hide" value="5">
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">融合</label>
+          <div class="col-sm-10">
+            <div class="form-value">是</div>
+            <label class="radio-inline hide"><input type="radio" name="illPos" id="" checked>是</label>
+            <label class="radio-inline hide"><input type="radio" name="illPos" id="" >否</label>
+
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="SUVmax"></label>
+          <div class="col-sm-10">
+            <div class="col-md-4 mb-15">
+              <label class="control-label">长径</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="length" class="form-control hide" value="5">
+            </div>
+
+            <div class="col-md-4 mb-15">
+              <label class="control-label">短径</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="short" class="form-control hide" value="5">
+            </div>
+
+            <div class="col-md-4 mb-15">
+              <label class="control-label">高径</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="short" class="form-control hide" value="5">
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.form-group -->
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">边缘</label>
+          <div class="col-sm-10">
+            <div class="form-value">清楚</div>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>清楚</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不清楚</label>
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">密度</label>
+          <div class="col-sm-10">
+            <div class="form-value">均匀</div>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>均匀</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不均匀</label>
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">更低密度坏死区</label>
+          <div class="col-sm-10">
+            <div class="form-value">是</div>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>是</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" >否</label>
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="SUVmax"></label>
+          <div class="col-sm-10">
+            <div class="col-md-4 mb-15">
+              <label class="control-label">CT值平扫</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="ct-ps" class="form-control hide" value="5">
+            </div>
+
+
+            <div class="col-md-4 mb-15">
+              <label class="control-label">CT值增强动脉期</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="ct-zqd" class="form-control hide" value="5">
+            </div>
+
+            <div class="col-md-4 mb-15">
+              <label class="control-label">CT值增强静脉期</label> 
+              <div class="form-value">5</div>
+              <input type="text" name="ct-zqj" class="form-control hide" value="5">
+            </div>
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">强化类型</label>
+          <div class="col-sm-10">
+            <div class="form-value">均匀</div>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" checked>均匀</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type" >不均匀</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type">不规则周边</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type">中心强化</label>
+            <label class="radio-inline hide"><input type="radio" name="strengthen-type">环形强化</label>
+          </div>
+        </div>
+        <!-- /.form-group -->
+
+        <div class="form-group">
+          <label class="control-label col-sm-2">糖代谢</label>
+          <div class="col-sm-10">
+            <div class="form-value">增高</div>
+            <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism">不增高</label>
+            <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism" data-toggle="radioSubTrigger" data-target="#glycometabolism" checked>增高</label>
+            <label class="radio-inline hide"><input type="radio" name="F-FDG-PET-Metabolism">降低</label>
+            <div class="clearfix ignore-hide hide" id="glycometabolism">
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label" for="F-FDG-PET-concentrationType">浓聚类型</label> 
+                <div class="col-sm-10">
+                  <div class="form-value">均匀浓聚</div>
+                  <div class="radio hide">
+                    <label><input type="radio" name="F-FDG-PET-concentrationType">均匀浓聚</label>
+                  </div>
+                  <div class="radio hide">
+                    <label><input type="radio" name="F-FDG-PET-concentrationType">不均匀浓聚</label>
+                  </div>
+                  <div class="radio hide">
+                    <label><input type="radio" name="F-FDG-PET-concentrationType" checked>不规则周边</label>
+                  </div>
+                  <div class="radio hide">
+                    <label><input type="radio" name="F-FDG-PET-concentrationType" >中心浓聚</label>
+                  </div>
+                  <div class="radio hide">
+                    <label><input type="radio" name="F-FDG-PET-concentrationType" >环形浓聚</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">SUV最大值</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="suv-max" class="form-control hide" value="5">
+              </div>
+
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">SUV平均值</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="suv-avg" class="form-control hide" value="5">
+              </div>
+
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">T/B</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="T/B" class="form-control hide" value="5">
+              </div>
+
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">延迟SUV最大值</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="delay-suv-max" class="form-control hide" value="5">
+              </div>
+
+              <div class="col-md-4 mb-15">
+                <label class="control-label">延迟SUV平均值</label> 
+                <div class="form-value">5</div>
+                <input type="text" name="delay-suv-avg" class="form-control hide" value="5">
+              </div>
+
+            </div>
+            <!-- /#glycometabolism -->
+          </div>
+        </div>
+        <!-- /.form-group -->
+        <div class="col-lg-12 hide">
+          <hr>
+          <div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+           <input type="submit" class="btn btn-primary" value="保 存">
+         </div>
+         <div class="col-sm-2">
+           <button class="btn btn-default edit-cancle">取 消</button>
+         </div>
+       </div>
+     </form>
+
+   </div>
+   <!-- /.panel-body -->
+ </div>
+
+ <!-- 添加按钮 -->
+ <a href="#" class="btn btn-primary self-add hide">
+  添加淋巴结转移
+</a>
+
+</div>
+<!-- /.col-lg-12 -->
+
+</div>
+<!-- /.row -->

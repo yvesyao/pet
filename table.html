@@ -8,30 +8,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>湘雅二医院PET-CT中心——电子病历系统</title>
+	<title>pet-ct诊断数据库——数据信息浏览</title>
 	<link rel="shortcut icon" href="imgs/logo20.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
     </head>
     <body>
     	<div id="header" class="clearfix">
-    	</div><!-- 
-    	<ol class="breadcrumb">
-    		<li>首页</li>
-    	</ol> -->
-    	<div id="content" class="col-sm-12 clearfix">
+    	</div>
+        <div id="content" class="container clearfix">
+        	<ol class="breadcrumb">
+                <li><a href="menu.html">首页</a></li>
+        		<li>数据信息浏览</li>
+        	</ol>
     		<div class="pt">
-    			<a href="addRecord.html" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right mt-20 hidden-xs"><span class="glyphicon glyphicon-plus"></span> 添加病历</a>
+                <!-- addRecord.html -->
+    			<a href="#" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right mt-20 hidden-xs"><span class="glyphicon glyphicon-plus"></span> 添加病历</a>
     			<h3>电子病历概览</h3>
     			<div class="clear"></div>
-    			<!-- (tr.success>td{234711$$$}+td{科室$}+td{100$$$}+td{患者$}+td{男}+td{2$}+td{19$$-$$-$$}+td{湖南}+td{淋巴瘤}+td{淋巴瘤}+td{<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="">CRsF表</a></li></ul></div>})*20 -->
+    			<!-- (tr.success>td{234711$$$}+td{科室$}+td{100$$$}+td{患者$}+td{男}+td{2$}+td{19$$-$$-$$}+td{湖南}+td{淋巴瘤}+td{淋巴瘤}+td{<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="">CRsF表</a></li></ul></div>})*20 -->
     			<table class="table table-bordered table-hover table-condensed table-striped table-responsive mt datatable">
     				<thead>
     					<tr class="success">
@@ -61,7 +60,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711001">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -76,7 +75,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711002">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -91,7 +90,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>肺癌</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711003">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -106,7 +105,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711004">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -121,7 +120,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711005">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -136,7 +135,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711006">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -151,7 +150,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711007">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -166,7 +165,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711008">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -181,7 +180,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>肺癌</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=134711009">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -196,7 +195,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>胃癌</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110010">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -211,7 +210,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110011">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -226,7 +225,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110012">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -241,7 +240,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110013">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -256,7 +255,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110014">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -271,7 +270,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110015">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -286,7 +285,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110016">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -301,7 +300,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110017">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -316,7 +315,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110018">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -331,7 +330,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110019">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     					<tr>
@@ -346,7 +345,7 @@
     						<td class="hidden-xs">淋巴瘤</td>
     						<td>淋巴瘤</td>
     						<td>
-    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="">病理</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a href="crf.html?pId=1347110020">CRF表</a></li></ul></div>
+    							<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="" data-toggle="modal" data-target="#patientModal">详细信息</a></li><li><a href="record.html" target="_blank">病案单</a></li><li><a href="inspect.html" target="_blank">C12检验结果</a></li><li><a href="examine.html" target="_blank">PET诊断报告</a></li><li><a target="_blank" href="crf.html">CRF表</a></li><li><a href="#">删除</a></li></ul></div>
     						</td>
     					</tr>
     				</tbody>

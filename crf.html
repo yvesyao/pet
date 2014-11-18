@@ -1,180 +1,245 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie" lang="zh-cn"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie" lang="zh-cn"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie" lang="zh-cn"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!DOCTYPE html>
 <html lang="zh-cn">
-<!--<![endif]-->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PET-CT中心——CRF表</title>
-	<link rel="shortcut icon" href="imgs/logo20.png">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
-      </head>
-      <body class="frameStyle">
-       <div id="header" class="clearfix">
-       </div>
-       <ol class="breadcrumb">
-        <li><a href="table.html">首页</a></li>
-        <li>CRF表</li>
-        <li class="patient">湘雅二医院</li>
-        <li class="patient">科室1</li>
-        <li class="patient">病人1</li>
-      </ol>
-      <div id="content" class="col-sm-12 clearfix">
-        <div class="col-md-3" id="leftMenu">
-          <div class="bs-docs-sidebar hidden-print" id="pet-left-menu" role="complementary">
-            <ul class="nav bs-docs-sidenav">
-              <li class="active" id="patientInfo-p">
-                <a data-toggle="collapse" data-parent="#patientInfo-p" href="#patientInfo">病历信息</a>
-                <ul class="nav collapse" id="patientInfo">
-                  <li><a href="http://www.baidu.com">基本信息</a></li>
-                  <li><a href="table.html">病案单</a></li>
-                </ul>
-              </li>
-              <li class="active" id="feiai-p">
-                <a data-toggle="collapse" data-parent="#feisi-p" href="#feiai">肺癌</a>
-                <ul class="nav collapse" id="feiai">
-                  <li><a href="#">指标1</a></li>
-                  <li><a href="#">指标2</a></li>
-                  <li><a href="#">指标3</a></li>
-                </ul>
-              </li>
-              <li class="active" id="weiai-p">
-                <a data-toggle="collapse" data-parent="#weiai-p" href="#weiai">胃癌</a>
-                <ul class="nav collapse" id="weiai">
-                  <li><a href="#">指标1</a></li>
-                  <li><a href="#">指标2</a></li>
-                  <li><a href="#">指标3</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
 
-        </div>
-        <div class="col-md-9" id="subPage">
-          <div class="panel panel-success">
-            <div class="panel-heading">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="imgs/logo20.png">
+  <title>PET-CT中心——CRF表</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- MetisMenu CSS -->
+  <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+  <!-- Custom CSS -->
+  <link href="css/crf.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+      </head>
+
+      <body>
+
+        <div id="wrapper">
+
+          <!-- Navigation -->
+          <nav class="navbar navbar-static-top" id="crf-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div class="navbar-brand">
+                <img src="imgs/logo.png"  height="20" alt="Logo" class="pull-left">
+                <img src="imgs/csu.png" height="20" alt="CSU" id="csu-logo" style="padding-left: 2px;">
+                <span class="title">恶性肿瘤pet-ct诊断数据库</span>
+              </div>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <li><a href="#">管理员：关培源</a></li>
+                  </li>
+                  <li><a href="index.html">注销</a></li>
+                </ul>
+                <!-- /.dropdown-messages -->
+              </li>
+              <!-- /.dropdown -->
+
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation" id="leftMenu">
+              <div class="sidebar-nav navbar-collapse collapse">
+                <ul class="nav" id="side-menu">
+                  <li>
+                    <a href="#">
+                      病历信息
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" id="patientInfo">
+                      <li><a href="patientInfo.html">基本信息</a></li>
+                      <li><a href="#" data-toggle="modal" data-target="#tumour-modal">添加肿瘤</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">前列腺癌
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" id="prostate">
+                      <li><a href="prostateInfo.html">症状信息</a></li>
+                      <li><a href="pet-ct.html">pet-ct</a></li>
+                      <li><a href="vioRange.html">侵犯范围</a></li>
+                      <li><a href="lymphTrans.html">淋巴结转移</a></li>
+                      <li><a href="distanceTrans.html">远处转移</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                      胃癌
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse" id="prostate">
+                      <li><a href="prostateInfo.html">症状信息</a></li>
+                      <li><a href="pet-ct.html">pet-ct</a></li>
+                      <li><a href="vioRange.html">侵犯范围</a></li>
+                      <li><a href="lymphTrans.html">淋巴结转移</a></li>
+                      <li><a href="distanceTrans.html">远处转移</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+              <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+          </nav>
+
+          <!-- Page Content -->
+          <div id="page-wrapper">
+
+            <div id="page-path">
+              <div class="pull-right actions">
+                <a href="#" id="editIcon" title="编辑">
+                  <b class="glyphicon glyphicon-edit"></b>
+                </a>
+                <a class="hide edit-cancle" href="#" id="cancelEditIcon" title="取消编辑">
+                  <b class="glyphicon glyphicon-remove"></b>
+                </a>
+              </div>
+              
               <ol class="breadcrumb">
-                <li>病历信息</li>
+                <li><a href="table.html">首页</a></li>
                 <li>CRF表</li>
+                <li class="patient">湘雅二医院</li>
+                <li class="patient">科室1</li>
+                <li class="patient">病人1</li>
               </ol>
             </div>
-            <div class="panel-body">
-              <div class="content zoom">
-                dfgjhfgafgaksjhfasjkfhsdakjfhsadkjh
+
+            <div id="sub-page" class="clearfix">
+              <div class="page-content">
+                <h1 class="page-header">Blank</h1>
               </div>
-              <div class="loading zoom" style="display: none;">
-                <div class="img">
-                  <span style="color: #222; line-height:19px;">加载中。。。</span>
+              <!-- /.col-lg-12 -->
+              <div class="loading zoom hide">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active"  role="progressbar">
                 </div>
               </div>
             </div>
+            <!-- /.row -->
           </div>
-          <!-- 
-          <div id="subContent" class="clearfix">
-          
-          
-          
-          </div> -->
+          <!-- /#page-wrapper -->
+
         </div>
+        <!-- /#wrapper -->
 
-      </div>
+        <div class="modal fade" id="tumour-modal" role="dialog" aria-hidden="false" aria-labelledby="toumer-modal-label">
+          <div class="modal-dialog modal-content">
+            <div class="modal-header">
+              <div class="close" data-dismiss="modal">×</div>
+              <h4 class="modal-title" aria-hidden="true" id="toumer-modal-label">添加肿瘤</h4>
+            </div>
+            <div class="modal-body">
+              <form action="hehe" method="post" id="tumour-form" class="form-horizontal clearfix">
+                <div class="col-sm-3 col-xs-6">
+                  <label>
+                    <input type="checkbox" name="tumour" value="肺癌">
+                    肺癌
+                  </label>
+                </div>
+                <!-- /.form-group -->
 
-      <hr>
-      <div id="footer" class = "mt clearfix"></div>
+                <div class="col-sm-3 col-xs-6">
+                  <label>
+                    <input type="checkbox" name="tumour" value="胃癌">
+                    胃癌
+                  </label>
+                </div>
+                <!-- /.form-group -->
 
-      <!-- scripts here -->
-      <script src="js/jquery-1.10.2.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/jquery.history.js"></script>
-      <!-- external scripts -->
-      <script type = "text/javascript">
-      window.$ && $(function() {
+                <div class="col-sm-3 col-xs-6">
+                  <label>
+                    <input type="checkbox" name="tumour" value="脑癌">
+                    脑癌
+                  </label>
+                </div>
+                <!-- /.form-group -->
 
-        //顶部栏和底部栏的载入，菜单的affix配置
-        $('#header').load("header.html", function() {
-          $('#footer').load("footer.html", function() {
-            $('.bs-docs-sidebar').affix({
-              offset: {
-                top: $('#header').outerHeight(true) + $('.breadcrumb').outerHeight(true),
-                bottom: function() {
-                  return (this.bottom = $('#footer').outerHeight(true) + 1);
-                }
-              }
-            });
-          });
-        });
+                <div class="col-sm-3 col-xs-6">
+                  <label>
+                    <input type="checkbox" name="tumour" value="乳腺癌">
+                    乳腺癌
+                  </label>
+                </div>
+                <!-- /.form-group -->
 
-        //history变量，用于动态加载时地址栏跟着改变
-        var History = window.History,
-          State = History.getState();
+                <div class="col-sm-3 col-xs-6">
+                  <label>
+                    <input type="checkbox" name="tumour" value="大肠癌">
+                    大肠癌
+                  </label>
+                </div>
+                <!-- /.form-group -->
 
-        //子页面跳转
-        History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
-          var State = History.getState(); // Note: We are using History.getState() instead of event.state
-          $.post(State.url.substring(State.url.indexOf('?') + 1, State.url.length), function(data) {
-            $('#subPage .loading').hide();
-            var newTitle = $(data).filter('title').text();
-            /*if (newTitle.indexOf("Error") >= 0) { //错误页
-              $('head').remove();
-              $('body').html(data);
-              return;
-            }*/
-            /*if ($(data).filter('meta[name="login"]').attr('content') == 'login') {
-              window.location.href = "<%=basePath%>";
-              return;
-            }*/
-            $('title').text(newTitle);
-            $('.subPage .panel-body .content').html(data);
-            /*footerAdjust();
-            subReady();*/
-          });
-        });
-        $('#leftMenu ul a').not('[data-parent]').click(function(event) {
-          /* Act on the event */
-          event.preventDefault();
-          var _node = $(this);
-          var _path = '';
-          do {
-            _path = '<li>' + _node.text() + '</li>' + _path;
-            _node = _node.parent().parents('li').children('a');
-          } while (_node.length != 0);
-          $('#subPage .panel-heading .breadcrumb').html(_path);
-          $('#leftMenu').children('li').removeClass('active');
-          $(this).parent('li').addClass('active');
-          changeState($(this).attr('href'));
-        });
-      });
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" type="submit">提 交</button>
+              <button class="btn btn-default" data-dismiss="modal">关 闭</button>
+            </div>
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
-      //将新地址写入History
-      function changeState(href) {
-        if (window.location.href.split("?")[1] === href) return;
-        $('#subPage .loading').show();
-        /*$.get('ajaxLogin_checkLogin.action', function(data) { //检测是否登录
-          if (data.result == '1') {*/
-            if (!(!-[1, ] && (!window.XMLHttpRequest || document.documentMode <= 8)))//非ie8及以下
-              History.pushState(null, null, location.href.split("?")[0] + "?" + href);
-            else
-              $('#subPage .content').load(href, function() {
-                $('#subPage .loading').hide();
-                //subReady();
-              });
-          /*} else
-            noLogin();
-        });*/
-      }
-</script>
+        <hr>
+        <div id="footer" class = "mt clearfix"></div>
 
-<script type="text/javascript" language="javascript" src="js/common.js"></script>
-</body>
-</html>
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.10.2.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/common.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+        <script type="text/javascript" src="js/jquery.history.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/crf.js"></script>
+
+      </body>
+
+      </html>
+
