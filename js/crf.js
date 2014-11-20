@@ -22,23 +22,22 @@
     //子页面跳转
     History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
       var State = History.getState(); // Note: We are using History.getState() instead of event.state
-      $.post(State.url.substring(State.url.indexOf('?') + 1, State.url.length), function(data) {
-        if (window.location.href !== State.url) return;//在请求此页面的过程中又触发了别的页面请求，则中止加载
-        $('#sub-page .loading').hide();
-        var newTitle = $(data).filter('title').text();
-        /*if (newTitle.indexOf("Error") >= 0) { //错误页
-$('head').remove();
-$('body').html(data);
-return;
-}*/
-        /*if ($(data).filter('meta[name="login"]').attr('content') == 'login') {
-window.location.href = "<%=basePath%>";
-return;
-}*/
-        $('title').text(newTitle);
-        $('#sub-page .page-content').html(data);
-        __canEdit = true;
-        docReady();
+      $.ajax({
+        mimeType: 'text/html; charset=utf-8', // ! Need set mimeType only when run from local file
+        url: State.url.substring(State.url.indexOf('?') + 1, State.url.length),
+        type: 'GET',
+        success: function(data) {
+          if (window.location.href !== State.url) return; //在请求此页面的过程中又触发了别的页面请求，则中止加载
+          $('#sub-page .page-content').html(data);
+          __canEdit = true;
+          $('#sub-page .loading').hide();
+          docReady();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          alert(errorThrown);
+        },
+        dataType: "html",
+        async: false
       });
     });
 
@@ -185,17 +184,17 @@ return;
     };
     /*删除添加的插件*/
     $(obj).closest('.new-added')
-          .append('<a href="#" class="btn btn-danger remove-added"><b class="glyphicon glyphicon-remove"></b></a>')
-          .children('.remove-added').click(function(event) {
-      /* Act on the event */
-      event.preventDefault();
-      if (confirm("您确定要删除此元素吗？")) {
-        $(this).closest('.new-added').remove();
-      };
-    });
+      .append('<a href="#" class="btn btn-danger remove-added"><b class="glyphicon glyphicon-remove"></b></a>')
+      .children('.remove-added').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+        if (confirm("您确定要删除此元素吗？")) {
+          $(this).closest('.new-added').remove();
+        };
+      });
     $(obj).after(_addVal).prev(':checkbox, :radio').val(_addVal);
     $(obj).remove();
-    
+
     __addFlag = true;
   };
 
