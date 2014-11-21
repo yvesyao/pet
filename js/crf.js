@@ -22,16 +22,17 @@
     //子页面跳转
     History.Adapter.bind(window, 'statechange', function() { // Note: We are using statechange instead of popstate
       var State = History.getState(); // Note: We are using History.getState() instead of event.state
+      var targetUrl = State.url.substring(State.url.indexOf('?') + 1, State.url.length);
       $.ajax({
         mimeType: 'text/html; charset=utf-8', // ! Need set mimeType only when run from local file
-        url: State.url.substring(State.url.indexOf('?') + 1, State.url.length),
+        url: targetUrl,
         type: 'GET',
         success: function(data) {
           if (window.location.href !== State.url) return; //在请求此页面的过程中又触发了别的页面请求，则中止加载
           $('#sub-page .page-content').html(data);
           __canEdit = true;
-          $('#sub-page .loading').hide();
-          docReady();
+          $('title').text($(data).filter('title').text());
+          docReady(targetUrl);
         },
         error: function(jqXHR, textStatus, errorThrown) {
           alert(errorThrown);
@@ -58,7 +59,7 @@
     var thisUrl = window.location.href;
     thisUrl = thisUrl.indexOf('?') > 0 ? (thisUrl.substring(thisUrl.indexOf('?') + 1, thisUrl.length)) : "patientInfo.html";
     $('#sub-page .page-content').load(thisUrl, function() {
-      docReady();
+      docReady(thisUrl);
     });
     /* 刷新时默认选中 */
     $('#side-menu>li>ul a').each(function() {
@@ -79,12 +80,30 @@
   });
 
 
-  function docReady() {
+  function docReady(selfUrl) {
 
     $('a[href="#"]').click(function(event) {
       event.preventDefault();
     });
 
+    /*菜单栏插件*/
+    $('#side-menu').metisMenu();
+
+    /*展开当前菜单栏*/
+    if(selfUrl) {
+      $links = $('#leftMenu #side-menu ul a');
+      for (var i = 0; i < $links.length; ++i) {
+        var $link = $($links[i]);
+        if ($link.attr('href') == selfUrl){
+          var $_parentLi = $link.closest('ul').closest('li');
+          if ($_parentLi.hasClass('active')) break;
+          $links.closest('li').removeClass('cur-page');
+          $link.closest('li').addClass('cur-page');
+          $_parentLi.children('a').click();
+          break;
+        }
+      };
+    }
     /*退出编辑状态*/
     $('.edit-cancle').unbind('click.cancelEdit').bind('click.cancelEdit', function(event) {
       event.preventDefault();
@@ -135,9 +154,6 @@
       changeState($(this).attr('href'));
     });
 
-    /*菜单栏插件*/
-    $('#side-menu').metisMenu();
-
     /*datepicker*/
     $(".datepicker").datepicker({
       regional: "zh-TW",
@@ -167,6 +183,10 @@
       });
       radioSubToggle($(this));
     });
+
+
+    $('#sub-page .loading').hide();
+
   };
 
   function radioSubToggle(elem) {

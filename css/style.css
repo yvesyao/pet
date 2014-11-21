@@ -90,8 +90,15 @@ div.center, p.center, img.center, table.center {
 }
 
 /* menu */
+#menuBox {
+	border-radius: 7px;
+	border: 1px solid #ddd;
+	box-shadow: 4px 4px 10px #aaa;
+	padding: 2em;
+}
+
 .btn h3 {
-	margin: 20px 0;
+	margin: 5px 0;
 }
 
 
@@ -137,9 +144,8 @@ th[class*=sorting]:hover{
 }
 #page-title .en{
 	height: 20px;
-	font-size: 17px;
-	letter-spacing: 2px;
-	word-spacing: 4px;
+	font-size: 14px;
+	letter-spacing: .6px;
 }
 #page-title .en span{
 	padding-left: 4px;
@@ -304,12 +310,12 @@ menu
 }
 #leftMenu {
 	border-right: #f0f0f0 ridge 3px;
-} */
-/* subPage */
+	} */
+	/* subPage */
 
-.form-horizontal .form-value {
-	padding-top: 7px;
-}
+	.form-horizontal .form-value {
+		padding-top: 7px;
+	}
 /* #subPage {
 	margin-left: -3px;
 	border-left: #f0f0f0 ridge 3px;
@@ -339,110 +345,110 @@ menu
 }
 #subContent {
 	padding: 2em;
-} */
-/* footer */
-#footer {
-	color: #555;
-}
-
-#footer .container>div {
-	margin-bottom: 1em;
-}
-
-#footer blockquote {
-	padding-top: 0;
-}
-
-.widget .widget-title {
-	font: 300 20px "微软雅黑",Helvetica,"Heiti SC",sans-serif;
-	margin: 0 0 10px;
-	color: #39727D;
-}
-.widget ol, .widget ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.widget li {
-	list-style: none;
-	padding: 5px 0;
-}
-#linkcat li {
-	display: inline-block;
-	margin-right: 1em;
-}
-.site-info {
-	margin: 30px auto;
-	max-width: 1040px;
-	width: 100%;
-	color: #999;
-}
-
-/*Patient*/
-#patientModal .form-group span {
-	display: block;
-	margin-top: 7px;
-}
-
-/* record */
-#patientBasicInfo span {
-	padding-left: 2em;
-}
-#patientBasicInfo {
-	border-bottom: 1px solid #ddd;
-	padding: 0.5em 0;
-}
-.topFixed {
-	position: fixed;
-	top: 0;
-	z-index:99999;
-	background-color: #fff;
-}
-.page pre {
-	font-size: 14px;
-	line-height: 2em;
-}
-
-@media(max-width:1100px) {
-	.bs-docs-sidebar {
-		width: 220px;
-		margin-left: 20px;
+	} */
+	/* footer */
+	#footer {
+		color: #555;
 	}
-}
 
-@media(max-width:992px) {
-	.bs-docs-sidebar {
-		width: 100%;
-		border-bottom: 
+	#footer .container>div {
+		margin-bottom: 1em;
 	}
-	.bs-docs-sidenav>li {
-		float: left;
-		display: inline;
-		margin-left: -1px;
-	}
-	.bs-docs-sidenav>li a {
-		border-top-color: transparent !important;
-	}
-	.bs-docs-sidenav a {
-		background: #fff !important;
-	}
-}
 
-/* 移动端样式 */
-@media(max-width:768px) {
-	.page {
+	#footer blockquote {
+		padding-top: 0;
+	}
+
+	.widget .widget-title {
+		font: 300 20px "微软雅黑",Helvetica,"Heiti SC",sans-serif;
+		margin: 0 0 10px;
+		color: #39727D;
+	}
+	.widget ol, .widget ul {
+		list-style: none;
+		margin: 0;
 		padding: 0;
-		box-shadow: none;
 	}
-	#csu-logo {
-		margin-left: 5px; 
+	.widget li {
+		list-style: none;
+		padding: 5px 0;
 	}
-	#page-title .cn h1{
-		clear: both;
-		margin-top: 5px;
-		font-size: 24px;
+	#linkcat li {
+		display: inline-block;
+		margin-right: 1em;
 	}
-	#page-title {
-		margin: 0.5em 0 0 0;
+	.site-info {
+		margin: 30px auto;
+		max-width: 1040px;
+		width: 100%;
+		color: #999;
 	}
-}
+
+	/*Patient*/
+	#patientModal .form-group span {
+		display: block;
+		margin-top: 7px;
+	}
+
+	/* record */
+	#patientBasicInfo span {
+		padding-left: 2em;
+	}
+	#patientBasicInfo {
+		border-bottom: 1px solid #ddd;
+		padding: 0.5em 0;
+	}
+	.topFixed {
+		position: fixed;
+		top: 0;
+		z-index:99999;
+		background-color: #fff;
+	}
+	.page pre {
+		font-size: 14px;
+		line-height: 2em;
+	}
+
+	@media(max-width:1100px) {
+		.bs-docs-sidebar {
+			width: 220px;
+			margin-left: 20px;
+		}
+	}
+
+	@media(max-width:992px) {
+		.bs-docs-sidebar {
+			width: 100%;
+			border-bottom: 
+		}
+		.bs-docs-sidenav>li {
+			float: left;
+			display: inline;
+			margin-left: -1px;
+		}
+		.bs-docs-sidenav>li a {
+			border-top-color: transparent !important;
+		}
+		.bs-docs-sidenav a {
+			background: #fff !important;
+		}
+	}
+
+	/* 移动端样式 */
+	@media(max-width:768px) {
+		.page {
+			padding: 0;
+			box-shadow: none;
+		}
+		#csu-logo {
+			margin-left: 5px; 
+		}
+		#page-title .cn h1{
+			clear: both;
+			margin-top: 5px;
+			font-size: 24px;
+		}
+		#page-title {
+			margin: 0.5em 0 0 0;
+		}
+	}
