@@ -4,6 +4,13 @@ window.$ && $(function() {
         event.preventDefault();
     });
 
+    $('.cancelFormBtn').click(function(event) {
+      /* Act on the event */
+      if (!confirm('表单还未提交，您确定要取消吗？')) {
+        event.preventDefault();
+    };
+});
+
     /*绑定对话框弹出事件*/
     $('[data-modal]').click(function(e) {
         e.preventDefault();
