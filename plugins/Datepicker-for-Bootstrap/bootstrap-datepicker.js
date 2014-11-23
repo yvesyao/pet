@@ -94,7 +94,8 @@
 				}
 				this.element.data('date', formated);
 			} else {
-				this.element.prop('value', formated);
+				//fix
+				this.element.val(formated).trigger('input');//触发input事件,使Validator截获
 			}
 		},
 		
