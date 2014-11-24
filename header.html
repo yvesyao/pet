@@ -44,54 +44,24 @@
 
 			</div>
 		</div>
-	<!--<div class="pull-right">
-		 <div class="hidden-xs" style="margin-top: 2.5em;"></div> 
-		<div>
-			 <div id="page-sub-title" class="pull-right"> 
-				<button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#pet-menu-collapse">
-			  		<span class="sr-only">菜单栏</span>
-			  		<span class="icon-bar"></span>
-			  		<span class="icon-bar"></span>
-			  		<span class="icon-bar"></span>
-			  	</button>
-			  					电子数据采集系统
-			  				</div> 
+	</div>
+	<div class="clear"></div>
+	<hr class="middle-hr">
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="pet-menu-collapse">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员 - 关培源 <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="index.html">注销</a></li>
+				</ul>
+			</li>
+		</ul>
 
-		</div>
-	</div>-->
-</div>
-<div class="clear"></div>
-<hr class="middle-hr">
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="pet-menu-collapse">
-	<ul class="nav navbar-nav navbar-right">
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员 - 关培源 <b class="caret"></b></a>
-			<ul class="dropdown-menu">
-				<li><a href="index.html">注销</a></li>
-			</ul>
-		</li>
-	</ul>
-
-	<ul class="nav navbar-nav navbar-right menu">
-		<li><a href="table.html">电子数据采集系统</a></li>
-		<li><a href="userMng.html">用户管理</a></li>
-	</ul>
-</div><!-- /.navbar-collapse -->
-</nav><!-- 
-<script type="text/javascript">
-	window.$ && $(function(){
-		/*绑定活跃菜单样式*/
-    	$('nav .navbar-nav.menu li').each(function(index, e){
-        $(this).click(function(e){
-            $.cookie('active_menu',index,{expires:365});
-        });
-    });
-    
-    alert($.cookie('active_menu'));
-    if ($.cookie('active_menu')!=null) {
-        $('nav .navbar-nav.menu li').removeClass('active');
-        $('nav .navbar-nav.menu li').eq($.cookie('active_menu')).addClass('active');
-    };
-	})
-</script> -->
+		<ul class="nav navbar-nav navbar-right menu">
+			<li><a href="table.html">电子数据采集系统</a></li>
+			<li><a href="userMng.html">用户管理</a></li>
+		</ul>
+	</div>
+	<!-- /.navbar-collapse -->
+</nav>
