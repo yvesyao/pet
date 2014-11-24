@@ -2,352 +2,774 @@
 <!--[if lt IE 7]> <html class="ie6 oldie" lang="zh-cn"> <![endif]-->
 <!--[if IE 7]>    <html class="ie7 oldie" lang="zh-cn"> <![endif]-->
 <!--[if IE 8]>    <html class="ie8 oldie" lang="zh-cn"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="zh-cn">
-<!--<![endif]-->
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>pet-ct诊断数据库——数据信息浏览</title>
-	<link rel="shortcut icon" href="imgs/logo20.png">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
-</head>
-<body>
+<!--[if gt IE 8]>
+  <!-->
+  <html lang="zh-cn">
+  <!--<![endif]-->
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>pet-ct诊断数据库——数据信息浏览</title>
+   <link rel="shortcut icon" href="imgs/logo20.png">
+   <link rel="stylesheet" href="css/jquery.dataTables.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script> <![endif]-->
+ </head>
+ <body>
    <div id="header" class="clearfix">
    </div>
    <div id="content" class="container clearfix">
-       <ol class="breadcrumb">
-        <li><a href="menu.html">首页</a></li>
-        <li>数据信息浏览</li>
+     <ol class="breadcrumb">
+      <li>
+        <a href="menu.html">首页</a>
+      </li>
+      <li>数据信息浏览</li>
     </ol>
     <div class="pt">
-        <!-- addRecord.html -->
-        <div class="page-header">
+      <!-- addRecord.html -->
+      <div class="page-header">
+<!-- 
+    <a href="#" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right hidden-xs">
+    <span class="glyphicon glyphicon-plus">
+    </span> 添加病历</a> -->
+    <h3>
+      数据信息浏览
+    </h3>
+  </div>
+        <!-- (tr>td{134711$$$}+td{王**}+td{男}+td{2$}+td{19$$-$$-$$}+td{汉族}+td{<div class="dropdown">
+        <button class="btn btn-default" data-toggle="dropdown">
+        <span class="glyphicon glyphicon glyphicon-th-large">
+        </span>
+        <b class="caret">
+        </b>
+        </button>
+        <ul class="dropdown-menu">
+        <li>
+        <a href="record.html" target="_blank">病案单</a>
+        </li>
+        <li>
+        <a href="crf.html" target="_blank">CRF表</a>
+        </li>
+        <li>
+            <a href="#">删除</a>
+            </li>
+            </ul>
+          </div>})*20 -->
+          <div class="panel panel-default clearfix">
+            <div class="panel-heading">查询病历</div>
+            <div class="panel-body">
+              <form action="" class="form-horizontal mt-10">
+                <div class="form-group col-xs-6 col-md-4">
+                  <label for="" class="control-label col-xs-3">门诊号</label>
+                  <div class="col-xs-8">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
 
-            <a href="#" data-toggle="tooltip" title="添加病历" class="btn btn-primary pull-right hidden-xs"><span class="glyphicon glyphicon-plus"></span> 添加病历</a>
-            <h3>
-                数据信息浏览
-            </h3>
-        </div>
-        <div class="clear"></div>
-        <!-- (tr>td{134711$$$}+td{王**}+td{男}+td{2$}+td{19$$-$$-$$}+td{汉族}+td{<div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-        <li><a href="#">删除</a></li></ul></div>})*20 -->
-        <table id="patientTable" class="table table-bordered table-hover table-condensed table-striped table-responsive mt datatable">
-            <thead>
-               <tr class="success">
-                  <th>门诊号</th>
-                  <th>姓名</th>
-                  <th>性别</th>
-                  <th>年龄</th>
-                  <th>出生日期</th>
-                  <th>民族</th>
-                  <th>操作</th>
-              </tr>
+                <div class="form-group col-xs-6 col-md-4">
+                  <label for="" class="control-label col-xs-3">姓名</label>
+                  <div class="col-xs-8">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-6 col-md-4">
+                  <label for="" class="control-label col-xs-3">年龄</label>
+                  <div class="col-xs-4">
+                    <input type="number" class="form-control">
+                  </div>
+                  <span class="pull-left" style="line-height:34px;">-</span>
+                  <div class="col-xs-4">
+                    <input type="number" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group col-xs-6 col-md-4">
+                  <label for="" class="control-label col-xs-3">癌症</label>
+                  <div class="col-xs-8">
+                    <select name="department" id="department" data-placeholder="请选择科室" class="form-control chosen-select">
+                      <option value="呼吸内科">肺癌</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="panel-footer" style="background: none;">
+             <div class="row">
+               <div class="col-md-2 pull-right">
+                 <input type="reset" class="btn btn-default" value="重 置">
+               </div>
+               <div class="col-md-2 pull-right">
+                 <input type="submit" class="btn btn-primary" value="搜 索">
+               </div>
+             </div>
+           </div>
+         </div>  
+         <table id="patientTable" class="table table-bordered table-hover table-condensed table-striped table-responsive mt datatable">
+           <thead>
+             <tr class="success">
+              <th>门诊号</th>
+              <th>姓名</th>
+              <th>性别</th>
+              <th>年龄</th>
+              <th>出生日期</th>
+              <th>民族</th>
+              <th>操作</th>
+            </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>134711001</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>21</td>
-                  <td>1901-01-01</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711002</td>
-                  <td>李*</td>
-                  <td>男</td>
-                  <td>22</td>
-                  <td>1902-02-02</td>
-                  <td>维吾尔族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711003</td>
-                  <td>闫*</td>
-                  <td>男</td>
-                  <td>23</td>
-                  <td>1903-03-03</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711004</td>
-                  <td>赵*</td>
-                  <td>男</td>
-                  <td>24</td>
-                  <td>1904-04-04</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711005</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>25</td>
-                  <td>1905-05-05</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711006</td>
-                  <td>孙**</td>
-                  <td>男</td>
-                  <td>26</td>
-                  <td>1906-06-06</td>
-                  <td>高山族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711007</td>
-                  <td>周**</td>
-                  <td>男</td>
-                  <td>27</td>
-                  <td>1907-07-07</td>
-                  <td>回族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711008</td>
-                  <td>孙**</td>
-                  <td>男</td>
-                  <td>28</td>
-                  <td>1908-08-08</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711009</td>
-                  <td>王**</td>
-                  <td>女</td>
-                  <td>29</td>
-                  <td>1909-09-09</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711010</td>
-                  <td>周**</td>
-                  <td>男</td>
-                  <td>20</td>
-                  <td>1910-10-10</td>
-                  <td>壮族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711011</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>21</td>
-                  <td>1911-11-11</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711012</td>
-                  <td>周*</td>
-                  <td>女</td>
-                  <td>22</td>
-                  <td>1912-12-12</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711013</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>23</td>
-                  <td>1913-13-13</td>
-                  <td>壮族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711014</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>24</td>
-                  <td>1914-14-14</td>
-                  <td>土家族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711015</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>25</td>
-                  <td>1915-15-15</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711016</td>
-                  <td>王**</td>
-                  <td>女</td>
-                  <td>26</td>
-                  <td>1916-16-16</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711017</td>
-                  <td>高**</td>
-                  <td>男</td>
-                  <td>27</td>
-                  <td>1917-17-17</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711018</td>
-                  <td>王**</td>
-                  <td>女</td>
-                  <td>28</td>
-                  <td>1918-18-18</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711019</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>29</td>
-                  <td>1919-19-19</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
-              <tr>
-                  <td>134711020</td>
-                  <td>王**</td>
-                  <td>男</td>
-                  <td>22</td>
-                  <td>1920-20-20</td>
-                  <td>汉族</td>
-                  <td>
-                      <div class="dropdown"><button class="btn btn-default" data-toggle="dropdown"><span class="glyphicon glyphicon glyphicon-th-large"></span><b class="caret"></b></button><ul class="dropdown-menu"><li><a href="record.html" target="_blank">病案单</a></li><li><a href="crf.html" target="_blank">CRF表</a></li>
-                              <li><a href="#">删除</a></li></ul></div>
-                  </td>
-              </tr>
+            <tr>
+              <td>134711001</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>21</td>
+              <td>1901-01-01</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711002</td>
+              <td>李*</td>
+              <td>男</td>
+              <td>22</td>
+              <td>1902-02-02</td>
+              <td>维吾尔族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711003</td>
+              <td>闫*</td>
+              <td>男</td>
+              <td>23</td>
+              <td>1903-03-03</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711004</td>
+              <td>赵*</td>
+              <td>男</td>
+              <td>24</td>
+              <td>1904-04-04</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711005</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>25</td>
+              <td>1905-05-05</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711006</td>
+              <td>孙**</td>
+              <td>男</td>
+              <td>26</td>
+              <td>1906-06-06</td>
+              <td>高山族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711007</td>
+              <td>周**</td>
+              <td>男</td>
+              <td>27</td>
+              <td>1907-07-07</td>
+              <td>回族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711008</td>
+              <td>孙**</td>
+              <td>男</td>
+              <td>28</td>
+              <td>1908-08-08</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711009</td>
+              <td>王**</td>
+              <td>女</td>
+              <td>29</td>
+              <td>1909-09-09</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711010</td>
+              <td>周**</td>
+              <td>男</td>
+              <td>20</td>
+              <td>1910-10-10</td>
+              <td>壮族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711011</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>21</td>
+              <td>1911-11-11</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711012</td>
+              <td>周*</td>
+              <td>女</td>
+              <td>22</td>
+              <td>1912-12-12</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711013</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>23</td>
+              <td>1913-13-13</td>
+              <td>壮族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711014</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>24</td>
+              <td>1914-14-14</td>
+              <td>土家族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711015</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>25</td>
+              <td>1915-15-15</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711016</td>
+              <td>王**</td>
+              <td>女</td>
+              <td>26</td>
+              <td>1916-16-16</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711017</td>
+              <td>高**</td>
+              <td>男</td>
+              <td>27</td>
+              <td>1917-17-17</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711018</td>
+              <td>王**</td>
+              <td>女</td>
+              <td>28</td>
+              <td>1918-18-18</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711019</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>29</td>
+              <td>1919-19-19</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>134711020</td>
+              <td>王**</td>
+              <td>男</td>
+              <td>22</td>
+              <td>1920-20-20</td>
+              <td>汉族</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-default" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon glyphicon-th-large">
+                    </span>
+                    <b class="caret">
+                    </b>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="record.html" target="_blank">病案单</a>
+                    </li>
+                    <li>
+                      <a href="crf.html" target="_blank">CRF表</a>
+                    </li>
+                    <li>
+                      <a href="#">删除</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
           </tbody>
-</table>
-</div>
-</div>
-<hr>
-<div id="footer" class = "mt"></div>
+        </table>
+      </div>
+    </div>
+    <hr>
+    <div id="footer" class = "mt">
+    </div>
 
-<!-- scripts here -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- 以下插件为测试所用 -->
-<script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.js"></script>
-<!-- external scripts -->
-<script type = "text/javascript">
-window.$ && $(function() {
+    <!-- scripts here -->
+    <script src="js/jquery-1.10.2.min.js">
+    </script>
+    <script src="js/bootstrap.min.js">
+    </script>
+    <!-- 以下插件为测试所用 -->
+    <script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js">
+    </script>
+    <script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.js">
+    </script>
+    <!-- external scripts -->
+    <script type = "text/javascript">
+    window.$ && $(function() {
 
-  $('#header').load("header.html");
-  $('#footer').load("footer.html");
+      $('#header').load("header.html");
+      $('#footer').load("footer.html");
 
-  $('.datatable').dataTable({
-     "sDom": "<'row'<'col-sm-6 hidden-xs mt'l><'col-sm-4 pull-right mt'f>r>t<'row'<'col-sm-12'i><'col-sm-12 center'p>>",
-     "oLanguage": {
-        "sLengthMenu": "每页显示 _MENU_ 条记录",
-        "sZeroRecords": "抱歉， 没有找到",
-        "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
-        "sInfoEmpty": "没有数据",
-        "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
-        "sSearch":  "搜索:",
-        "oPaginate": {
-           "sFirst": "首页",
-           "sPrevious": "前一页",
-           "sNext": "后一页",
-           "sLast": "尾页"
-            }
-       },
-				"bFilter": false, //过滤功能
-				"bSort": true, //排序功能
-				"bInfo": true,//页脚信息
-				"bAutoWidth": true//自动宽度
-		});
+      $('.datatable').dataTable({
+        /*        "sDom": "<'row'<'col-sm-6 hidden-xs mt'l>
+        <'col-sm-4 pull-right mt'f>r>t<'row'<'col-sm-12'i>
+        <'col-sm-12 center'p>>",*/
+        "pagingType": "bootstrap",
+        "oLanguage": {
+          "sLengthMenu": "每页显示 _MENU_ 条记录",
+          "sZeroRecords": "抱歉， 没有找到",
+          "sInfo": "从 _START_ 到 _END_ /共 _TOTAL_ 条数据",
+          "sInfoEmpty": "没有数据",
+          "sInfoFiltered": "(从 _MAX_ 条数据中检索)",
+          "sSearch": "搜索:",
+          "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "前一页",
+            "sNext": "后一页",
+            "sLast": "尾页"
+          }
+        },
+        "lengthChange": false,
+        "bFilter": false, //过滤功能
+        "bSort": true, //排序功能
+        "bInfo": true, //页脚信息
+        "bAutoWidth": true //自动宽度
+      });
 
-  $('#patientEditBtn').click(function(event) {
-     /* Act on the event */
-     event.preventDefault();
-     $(this).hide();
-     $('#patientModal .col-sm-8 span').hide();
-     $('#patientModal .hide').removeClass('hide').addClass('no-hide');
- });
+      $('#patientEditBtn').click(function(event) {
+        /* Act on the event */
+        event.preventDefault();
+        $(this).hide();
+        $('#patientModal .col-sm-8 span').hide();
+        $('#patientModal .hide').removeClass('hide').addClass('no-hide');
+      });
 
-  $('#patientModal').on('hidden.bs.modal', function (e) {
-     $('#patientEditBtn').show();
-     $('#patientModal .col-sm-8 span').show();
-     $('#patientModal .no-hide').removeClass('no-hide').addClass('hide');
- })
+      $('#patientModal').on('hidden.bs.modal', function(e) {
+        $('#patientEditBtn').show();
+        $('#patientModal .col-sm-8 span').show();
+        $('#patientModal .no-hide').removeClass('no-hide').addClass('hide');
+      })
 
-});
+    });
 </script>
 
-<script type="text/javascript" language="javascript" src="js/common.js"></script>
+<script type="text/javascript" language="javascript" src="js/common.js">
+</script>
 </body>
 </html>

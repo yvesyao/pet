@@ -44,13 +44,16 @@
 
 
     /*test*/
-    $('#tumour-modal :submit').click(function(e) {
+    $('#tumour-modal button.submit-tumour').click(function(e) {
       e.preventDefault();
       var _parent = $("#side-menu");
-      var _temp = $("#side-menu>li:eq(1)");
-      $('#tumour-form').find(':checked').each(function() {
-        _parent.append(_temp.clone(true).children('a').eq(0).html($(this).val() + '<span class="fa arrow"></span>').end().end());
-      });
+      var _temp = $("#side-menu>li.template:eq(0)");
+      var $tumours = $('#tumour-form :checked').not(':disabled');
+      for (var i = $tumours.length - 1; i >= 0; i--) {//没用$.each是因为需要在执行完之后才能加载菜单插件
+        $checkedTumour = $($tumours[i]);
+        _parent.append(_temp.clone(true).removeClass('hide template').children('a:eq(0)').html($checkedTumour.val() + '<span class="fa arrow"></span>').end());
+        $checkedTumour.prop('disabled', 'disabled');
+      }
       $("#tumour-modal").modal('hide');
       docReady();
     });

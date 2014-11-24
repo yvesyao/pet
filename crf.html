@@ -11,234 +11,384 @@
   <link rel="shortcut icon" href="imgs/logo20.png">
   <title>PET-CT中心——CRF表</title>
 
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-
-  <!-- MetisMenu CSS -->
-  <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/jquery-ui.min.css">
-
   <!-- Custom CSS -->
   <link href="css/crf.css" rel="stylesheet">
 
-  <!-- Custom Fonts -->
-  <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/style.css">
-
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+  </script><![endif]-->
 
-      </head>
+</head>
 
-      <body>
+<body>
 
-        <div id="wrapper">
+  <div id="wrapper">
 
-          <!-- Navigation -->
-          <nav class="navbar navbar-static-top" id="crf-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <div class="navbar-brand">
-                <img src="imgs/logo.png"  height="20" alt="Logo" class="pull-left">
-                <img src="imgs/csu.png" height="20" alt="CSU" id="csu-logo" style="padding-left: 2px;">
-                <span class="title">恶性肿瘤pet-ct诊断数据库</span>
-              </div>
-            </div>
-            <!-- /.navbar-header -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-static-top" id="crf-top" role="navigation" style="margin-bottom: 0">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar">
+          </span>
+          <span class="icon-bar">
+          </span>
+          <span class="icon-bar">
+          </span>
+        </button>
+        <div class="navbar-brand">
+          <img src="imgs/logo.png"  height="20" alt="Logo" class="pull-left">
+          <img src="imgs/csu.png" height="20" alt="CSU" id="csu-logo" style="padding-left: 2px;">
+          <span class="title">恶性肿瘤pet-ct诊断数据库</span>
+        </div>
+      </div>
+      <!-- /.navbar-header -->
 
-            <ul class="nav navbar-top-links navbar-right">
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                  <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <li><a href="#">管理员：关培源</a></li>
-                  </li>
-                  <li><a href="index.html">注销</a></li>
-                </ul>
-                <!-- /.dropdown-messages -->
+      <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw">
+            </i>  <i class="fa fa-caret-down">
+          </i>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <li>
+              <a href="#">管理员：关培源</a>
+            </li>
+          </li>
+          <li>
+            <a href="index.html">注销</a>
+          </li>
+        </ul>
+        <!-- /.dropdown-messages -->
+      </li>
+      <!-- /.dropdown -->
+
+    </ul>
+    <!-- /.navbar-top-links -->
+
+    <div class="navbar-default sidebar" role="navigation" id="leftMenu">
+      <div class="sidebar-nav navbar-collapse collapse">
+        <ul class="nav" id="side-menu">
+          <li>
+            <a href="#">
+              病历信息
+              <span class="fa arrow">
+              </span>
+            </a>
+            <ul class="nav nav-second-level collapse" id="patientInfo">
+              <li>
+                <a href="patientInfo.html">基本信息</a>
               </li>
-              <!-- /.dropdown -->
-
+              <li>
+                <a href="#" data-toggle="modal" data-target="#tumour-modal">添加肿瘤</a>
+              </li>
             </ul>
-            <!-- /.navbar-top-links -->
+          </li>
+          <li class="template hide">
+            <a href="#">前列腺癌
+              <span class="fa arrow">
+              </span>
+            </a>
+            <ul class="nav nav-second-level collapse" id="prostate">
+              <li>
+                <a href="prostateInfo.html">症状信息</a>
+              </li>
+              <li>
+                <a href="pet-ct.html">pet-ct</a>
+              </li>
+              <li>
+                <a href="vioRange.html">侵犯范围</a>
+              </li>
+              <li>
+                <a href="lymphTrans.html">淋巴结转移</a>
+              </li>
+              <li>
+                <a href="distanceTrans.html">远处转移</a>
+              </li>
+            </ul>
+          </li>
 
-            <div class="navbar-default sidebar" role="navigation" id="leftMenu">
-              <div class="sidebar-nav navbar-collapse collapse">
-                <ul class="nav" id="side-menu">
-                  <li>
-                    <a href="#">
-                      病历信息
-                      <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level collapse" id="patientInfo">
-                      <li><a href="patientInfo.html">基本信息</a></li>
-                      <li><a href="#" data-toggle="modal" data-target="#tumour-modal">添加肿瘤</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">前列腺癌
-                      <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level collapse" id="prostate">
-                      <li><a href="prostateInfo.html">症状信息</a></li>
-                      <li><a href="pet-ct.html">pet-ct</a></li>
-                      <li><a href="vioRange.html">侵犯范围</a></li>
-                      <li><a href="lymphTrans.html">淋巴结转移</a></li>
-                      <li><a href="distanceTrans.html">远处转移</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      胃癌
-                      <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level collapse" id="prostate">
-                      <li><a href="prostateInfo.html">症状信息</a></li>
-                      <li><a href="pet-ct.html">pet-ct</a></li>
-                      <li><a href="vioRange.html">侵犯范围</a></li>
-                      <li><a href="lymphTrans.html">淋巴结转移</a></li>
-                      <li><a href="distanceTrans.html">远处转移</a></li>
-                    </ul>
-                  </li>
+        </ul>
+      </div>
+      <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+  </nav>
 
-                </ul>
-              </div>
-              <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-          </nav>
+  <!-- Page Content -->
+  <div id="page-wrapper">
 
-          <!-- Page Content -->
-          <div id="page-wrapper">
+    <div id="page-path">
+      <div class="pull-right actions">
+        <a href="#" id="editIcon" title="编辑">
+          <b class="glyphicon glyphicon-edit">
+          </b>
+        </a>
+        <a class="hide edit-cancle" href="#" id="cancelEditIcon" title="取消编辑">
+          <b class="glyphicon glyphicon-remove">
+          </b>
+        </a>
+      </div>
 
-            <div id="page-path">
-              <div class="pull-right actions">
-                <a href="#" id="editIcon" title="编辑">
-                  <b class="glyphicon glyphicon-edit"></b>
-                </a>
-                <a class="hide edit-cancle" href="#" id="cancelEditIcon" title="取消编辑">
-                  <b class="glyphicon glyphicon-remove"></b>
-                </a>
-              </div>
-              
-              <ol class="breadcrumb">
-                <li><a href="table.html">首页</a></li>
-                <li>CRF表</li>
-                <li class="patient">湘雅二医院</li>
-                <li class="patient">科室1</li>
-                <li class="patient">病人1</li>
-              </ol>
-            </div>
+      <ol class="breadcrumb">
+        <li>
+          <a href="table.html">首页</a>
+        </li>
+        <li>CRF表</li>
+        <li class="patient">湘雅二医院</li>
+        <li class="patient">科室1</li>
+        <li class="patient">病人1</li>
+      </ol>
+    </div>
 
-            <div id="sub-page" class="clearfix">
-              <div class="page-content">
-                <h1 class="page-header">Blank</h1>
-              </div>
-              <!-- /.col-lg-12 -->
-              <div class="loading zoom ignore-hide">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped active">
-                    loading...
-                  </div>
-                </div>
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /#page-wrapper -->
-
+    <div id="sub-page" class="clearfix">
+      <div class="page-content">
+        <h1 class="page-header">Blank</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+      <div class="loading zoom ignore-hide">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active">
+            loading...
           </div>
-          <!-- /#wrapper -->
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
 
-          <div class="modal fade" id="tumour-modal" role="dialog" aria-hidden="false" aria-labelledby="toumer-modal-label">
-            <div class="modal-dialog modal-content">
-              <div class="modal-header">
-                <div class="close" data-dismiss="modal">×</div>
-                <h4 class="modal-title" aria-hidden="true" id="toumer-modal-label">添加肿瘤</h4>
-              </div>
-              <div class="modal-body">
-                <form action="hehe" method="post" id="tumour-form" class="form-horizontal clearfix">
-                  <div class="col-sm-3 col-xs-6">
-                    <label>
-                      <input type="checkbox" name="tumour" value="肺癌">
-                      肺癌
-                    </label>
-                  </div>
-                  <!-- /.form-group -->
+  </div>
+  <!-- /#wrapper -->
 
-                  <div class="col-sm-3 col-xs-6">
-                    <label>
-                      <input type="checkbox" name="tumour" value="胃癌">
-                      胃癌
-                    </label>
-                  </div>
-                  <!-- /.form-group -->
-
-                  <div class="col-sm-3 col-xs-6">
-                    <label>
-                      <input type="checkbox" name="tumour" value="脑癌">
-                      脑癌
-                    </label>
-                  </div>
-                  <!-- /.form-group -->
-
-                  <div class="col-sm-3 col-xs-6">
-                    <label>
-                      <input type="checkbox" name="tumour" value="乳腺癌">
-                      乳腺癌
-                    </label>
-                  </div>
-                  <!-- /.form-group -->
-
-                  <div class="col-sm-3 col-xs-6">
-                    <label>
-                      <input type="checkbox" name="tumour" value="大肠癌">
-                      大肠癌
-                    </label>
-                  </div>
-                  <!-- /.form-group -->
-
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-primary" type="submit">提 交</button>
-                <button class="btn btn-default" data-dismiss="modal">关 闭</button>
-              </div>
-            </div>
-            <!-- /.modal-dialog -->
+  <div class="modal fade" id="tumour-modal" role="dialog" aria-hidden="false" aria-labelledby="toumer-modal-label">
+    <div class="modal-dialog modal-content">
+      <div class="modal-header">
+        <div class="close" data-dismiss="modal">×</div>
+        <h4 class="modal-title" aria-hidden="true" id="toumer-modal-label">添加肿瘤</h4>
+      </div>
+      <div class="modal-body clearfix">
+        <form action="hehe" method="post" id="tumour-form" class="form-horizontal col-xs-12">
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="胃癌"> 胃癌
+            </label>
           </div>
-          <!-- /.modal -->
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="十二指肠癌"> 十二指肠癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="小肠癌"> 小肠癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="结直肠癌"> 结直肠癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="甲状腺癌"> 甲状腺癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="胸膜间皮瘤"> 胸膜间皮瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="腹膜间皮瘤"> 腹膜间皮瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="纵膈恶性肿瘤"> 纵膈恶性肿瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="宫颈癌"> 宫颈癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="卵巢癌"> 卵巢癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="膀胱癌"> 膀胱癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="肾癌"> 肾癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="输尿管癌"> 输尿管癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="子宫内膜癌"> 子宫内膜癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="胆囊癌"> 胆囊癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="前列腺癌"> 前列腺癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="鼻咽癌"> 鼻咽癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="恶性黑色素瘤"> 恶性黑色素瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="恶性软组织肿瘤"> 恶性软组织肿瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="肺癌"> 肺癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="胰腺癌"> 胰腺癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="肝癌"> 肝癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="骨肉瘤"> 骨肉瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="胶质瘤"> 胶质瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="乳腺癌"> 乳腺癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="软骨肉瘤"> 软骨肉瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="食管癌"> 食管癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="鼻窦癌"> 鼻窦癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="鼻腔癌"> 鼻腔癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="骨髓瘤"> 骨髓瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="喉癌"> 喉癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="口腔癌"> 口腔癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="口咽癌"> 口咽癌
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="淋巴瘤"> 淋巴瘤
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="腮腺CA"> 腮腺CA
+            </label>
+          </div>
+          <div class="col-sm-4 col-xs-6 mt-one">
+            <label>
+              <input type="checkbox" name="tumour" value="舌CA"> 舌CA
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary submit-tumour">提 交</button>
+        <button class="btn btn-default" data-dismiss="modal">关 闭</button>
+      </div>
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
 
-          <hr>
-          <div id="footer" class = "mt clearfix"></div>
+  <hr>
+  <div id="footer" class = "mt clearfix">
+  </div>
 
-          <!-- jQuery Version 1.11.0 -->
-          <script src="js/jquery-1.10.2.min.js"></script>
+  <!-- jQuery Version 1.11.0 -->
+  <script src="js/jquery-1.10.2.min.js">
+  </script>
 
-          <!-- Bootstrap Core JavaScript -->
-          <script src="js/bootstrap.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js">
+  </script>
 
-          <script src="js/common.js"></script>
+  <script src="js/common.js">
+  </script>
 
-          <!-- Metis Menu Plugin JavaScript -->
-          <script src="plugins/metisMenu/metisMenu.min.js"></script>
-          <script type="text/javascript" src="js/jquery.history.js"></script>
-          <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-          <!-- Custom Theme JavaScript -->
-          <script src="js/crf.js"></script>
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="plugins/metisMenu/metisMenu.min.js">
+  </script>
+  <script type="text/javascript" src="js/jquery.history.js">
+  </script>
+  <script type="text/javascript" src="js/jquery-ui.min.js">
+  </script>
+  <!-- Custom Theme JavaScript -->
+  <script src="js/crf.js">
+  </script>
 
-        </body>
+</body>
 
-        </html>
+</html>
 
