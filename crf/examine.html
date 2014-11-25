@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-lg-12">
+		<h3 class="page-header">实验室检查</h3>
+	</div>
+</div>
+<div class="row">
+	<form action="" method="post" class="form-horizontal">
+		<div class="col-lg-12">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="lab-examine">实验室检查（包括肿瘤标志物）</label>
+				<div class="col-sm-10">
+					<div class="col-md-4 mb-15">
+						<label class="control-label">血清总PSA</label> 
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<div class="col-md-4 mb-15">
+						<label class="control-label">血清游离PSA</label> 
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<div class="col-md-4 mb-15">
+						<label class="control-label">血红蛋白</label>
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<div class="col-md-4 mb-15">
+						<label class="control-label">红细胞</label>
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<div class="col-md-4 mb-15">
+						<label class="control-label">PAP（前列腺酸性磷酸酶）</label>
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<div class="col-md-4 mb-15">
+						<label class="control-label">PSMA（前列腺膜抗原）</label>
+						<div class="form-value">123.00</div>
+						<input type="text" name="examine" class="form-control hide" value="123.00">
+					</div>
+
+					<!-- 自主添加新症状模板 -->
+					<div class="col-md-4 hide add-template mb-15">
+						<label class="control-label"><input class="val-input" type="text"></label>
+						<input type="text" name="examine" class="form-control no-hide" value="">
+					</div>
+					<!-- 添加按钮 -->
+					<a href="#" class="btn btn-default self-add hide">
+						添加检查指标
+					</a>
+				</div>
+
+			</div>
+			<!-- /.form-group -->
+		</div>
+		<!-- /.col-lg-12 -->
+		<div class="col-lg-12 hide">
+			<hr>
+			<div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+				<input type="submit" class="btn btn-primary" value="保 存">
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-default edit-cancle">取 消</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- /.row -->

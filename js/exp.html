@@ -1,0 +1,47 @@
+<div class="row">
+	<div class="col-lg-12">
+		<h3 class="page-header" id="subTitle">超声表现</h3>
+		<script type="text/javascript">
+		/**
+		 * test
+		 */
+		var title = "";
+		switch (__expType) {
+			case 'us':
+				title = "超声";
+				break;
+			case 'xray':
+				title = "X线";
+				break;
+			case 'mri':
+				title = "MRI";
+				break;
+			default:
+				alert('Exp Type ERROR!');
+				return -1;
+		}
+		$('#subTitle').text(title + "表现");
+		</script>
+	</div>
+</div>
+<div class="row">
+	<form action="" method="post" class="form-horizontal">
+		<div class="col-lg-12">
+			<div class="form-group">
+				
+			</div>
+			<!-- /.form-group -->
+		</div>
+		<!-- /.col-lg-12 -->
+		<div class="col-lg-12 hide">
+			<hr>
+			<div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+				<input type="submit" class="btn btn-primary" value="保 存">
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-default edit-cancle">取 消</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- /.row -->

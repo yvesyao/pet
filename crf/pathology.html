@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-lg-12">
+		<h3 class="page-header">病理类型</h3>
+	</div>
+</div>
+<div class="row">
+	<form action="" method="post" class="form-horizontal">
+		<div class="col-lg-12">
+			<div class="form-group">
+				<label class="control-label col-sm-2">病理类型</label>
+				<div class="col-sm-10">
+					<div class="form-value">癌肉瘤</div>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">腺癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="" checked>癌肉瘤</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">导管腺癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">移行上皮癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">鳞状细胞癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">腺鳞癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">基底细胞癌</label>
+					<label class="radio-inline hide"><input type="radio" name="pathology" id="">类癌</label>
+
+					<!-- 自主添加新症状模板 -->
+					<label class="radio-inline no-hide add-template hide">
+						<input type="radio" name="pathology" value="??">
+						<input class="val-input" type="text">
+					</label>
+					<!-- 添加按钮 -->
+					<a href="#" class="btn btn-default self-add hide">
+						添加病理类型
+					</a>
+				</div>
+
+			</div>
+			<!-- /.form-group -->
+		</div>
+		<!-- /.col-lg-12 -->
+		<div class="col-lg-12 hide">
+			<hr>
+			<div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+				<input type="submit" class="btn btn-primary" value="保 存">
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-default edit-cancle">取 消</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- /.row -->

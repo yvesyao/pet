@@ -4,7 +4,7 @@
 @import url(../font-awesome-4.1.0/css/font-awesome.min.css);
 @import url(style.less);
 
- .nav-second-level {
+.nav-second-level {
     border-top: #eee solid 1px;
     background: white;
 }
@@ -12,6 +12,13 @@
 #crf-top {
     background-color: #00797C;
     border-bottom: 1px #00696c solid;
+}
+
+#tumour-modal {
+    label {
+        line-height: 30px;
+        margin: 0;
+    }
 }
 
 .navbar-brand {
@@ -87,6 +94,7 @@ body {
     .opacity(1);
     top: 0;
     left: 0;
+    z-index: 100;
     position: absolute;
 }
 
@@ -101,19 +109,6 @@ body {
 #sub-page .loading .progress-bar {
     width: 100%;
     text-align: center;
-}
-
-@media(min-width:768px) {
-    #page-wrapper {
-        position: inherit;
-        margin: 0 0 0 250px;
-        border-left: 1px solid #e7e7e7;
-    }
-
-    #sub-page {
-        padding: 0 30px;
-    }
-
 }
 
 .navbar-top-links li {
@@ -254,21 +249,6 @@ body {
     transform: rotate(-180deg);
 }
 
-@media(min-width:768px) {
-    .sidebar {
-        z-index: 1;
-        position: absolute;
-        width: 250px;
-        margin-top: 51px;
-    }
-
-    .navbar-top-links .dropdown-messages,
-    .navbar-top-links .dropdown-tasks,
-    .navbar-top-links .dropdown-alerts {
-        margin-left: auto;
-    }
-}
-
 .btn-outline {
     color: inherit;
     background-color: transparent;
@@ -288,7 +268,7 @@ body {
 }
 
 .btn-warning.btn-outline {
- color: #f0ad4e;
+   color: #f0ad4e;
 }
 
 .btn-danger.btn-outline {
@@ -355,4 +335,34 @@ body {
 
 .huge {
     font-size: 40px;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        border-left: 1px solid #e7e7e7;
+    }
+
+    #sub-page {
+        padding: 0 30px;
+        min-height: 800px;
+    }
+
+    .navbar-right {
+        margin-right: 0; 
+    }
+
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
 }

@@ -1,0 +1,79 @@
+<div class="row">
+	<div class="col-lg-12">
+		<h3 class="page-header">临床分期</h3>
+	</div>
+</div>
+<div class="row">
+	<form action="" method="post" class="form-horizontal">
+		<div class="col-lg-12">
+			<div class="form-group">
+				<label class="control-label col-sm-2">临床分期</label>
+				<div class="col-sm-10">
+					<div class="col-md-4 mb-15">
+						<label class="control-label">原发肿瘤(T)分期</label>
+						<div class="form-value">Tx</div>
+						<select class="form-control hide" name="tState">
+							<option value="T1" selected>Tx</option>
+							<option value="T2">T0</option>
+							<option value="T3">T1</option>
+							<option value="T4">T1a</option>
+							<option value="T5">T1b</option>
+							<option value="T6">T1c</option>
+							<option value="T7">T2</option>
+							<option value="T8">T2a</option>
+							<option value="T9">T2b</option>
+							<option value="T10">T3</option>
+							<option value="T11">T3a</option>
+							<option value="T12">T3b</option>
+							<option value="T13">T4</option>
+						</select>
+					</div>
+					<div class="col-md-4 mb-15">
+						<label class="control-label">区域淋巴结(N)分期</label>
+						<div class="form-value">N0</div>
+						<select class="form-control hide" name="nState">
+							<option value="N1">NX</option>
+							<option value="N2" selected>N0</option>
+							<option value="N3">N1</option>
+						</select>
+					</div>
+					<div class="col-md-4 mb-15">
+						<label class="control-label">远处转移(M)分期</label>
+						<div class="form-value">M1a</div>
+						<select class="form-control hide" name="mState">
+							<option value="M1">MX</option>
+							<option value="M2">M0</option>
+							<option value="M3">M1</option>
+							<option value="M4" selected>M1a</option>
+							<option value="M5">M1b</option>
+							<option value="M6">M1c</option>
+						</select>
+					</div>
+					<div class="col-md-4 mb-15">
+						<label class="control-label">临床分期</label>
+						<div class="form-value">III期</div>
+						<select class="form-control hide" name="aState">
+							<option value="A1">I期</option>
+							<option value="A2">II期</option>
+							<option value="A3" selected>III期</option>
+							<option value="A4">IV期</option>
+						</select>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.form-group -->
+		</div>
+		<!-- /.col-lg-12 -->
+		<div class="col-lg-12 hide">
+			<hr>
+			<div class="col-sm-2 col-sm-offset-7 col-xs-6 col-xs-offset-2">
+				<input type="submit" class="btn btn-primary" value="保 存">
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-default edit-cancle">取 消</button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- /.row -->

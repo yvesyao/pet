@@ -80,7 +80,7 @@
             </a>
             <ul class="nav nav-second-level collapse" id="patientInfo">
               <li>
-                <a href="patientInfo.html">基本信息</a>
+                <a href="crf/patientInfo.html">基本信息</a>
               </li>
               <li>
                 <a href="#" data-toggle="modal" data-target="#tumour-modal">添加肿瘤</a>
@@ -88,29 +88,123 @@
             </ul>
           </li>
           <li class="template hide">
-            <a href="#">前列腺癌
+            <a href="#">癌症名称
               <span class="fa arrow">
               </span>
             </a>
-            <ul class="nav nav-second-level collapse" id="prostate">
+            <ul class="nav nav-second-level collapse">
               <li>
-                <a href="prostateInfo.html">症状信息</a>
+                <a href="">症状</a>
               </li>
               <li>
-                <a href="pet-ct.html">pet-ct</a>
+                <a href="">体征</a>
               </li>
               <li>
-                <a href="vioRange.html">侵犯范围</a>
+                <a href="">疾病史</a>
               </li>
               <li>
-                <a href="lymphTrans.html">淋巴结转移</a>
+                <a href="">实验室检查</a>
               </li>
               <li>
-                <a href="distanceTrans.html">远处转移</a>
+                <a href="">病理类型</a>
+              </li>
+              <li>
+                <a href="">分化程度</a>
+              </li>
+              <li>
+                <a href="">生长类型</a>
+              </li>
+              <li>
+                <a href="">免疫组化</a>
+              </li>
+              <li>
+                <a href="">临床分期</a>
+              </li>
+              <li>
+                <a href="">超声表现</a>
+              </li>
+              <li>
+                <a href="">X线表现</a>
+              </li>
+              <li>
+                <a href="">MRI表现</a>
+              </li>
+              <li>
+                <a href="">C12检验结果</a>
+              </li>
+              <li>
+                <a href="">pet-ct</a>
+              </li>
+              <li>
+                <a href="">侵犯范围</a>
+              </li>
+              <li>
+                <a href="">淋巴结转移</a>
+              </li>
+              <li>
+                <a href="">远处转移</a>
               </li>
             </ul>
           </li>
 
+          <li>
+            <a href="#">前列腺癌
+              <span class="fa arrow"></span>
+            </a>
+            <ul class="nav nav-second-level collapse" id="prostate">
+              <li>
+                <a href="crf/symptom.html">症状</a>
+              </li>
+              <li>
+                <a href="crf/bodyFeature.html">体征</a>
+              </li>
+              <li>
+                <a href="crf/illHistory.html">疾病史</a>
+              </li>
+              <li>
+                <a href="crf/examine.html">实验室检查</a>
+              </li>
+              <li>
+                <a href="crf/pathology.html">病理类型</a>
+              </li>
+              <li>
+                <a href="crf/polarization.html">分化程度</a>
+              </li>
+              <li>
+                <a href="crf/growType.html">生长类型</a>
+              </li>
+              <li>
+                <a href="crf/immunohistochemistry.html">免疫组化</a>
+              </li>
+              <li>
+                <a href="crf/clinicalStage.html">临床分期</a>
+              </li>
+              <li>
+                <a href="crf/exp.html?expType=us" data-exp-type="us">超声表现</a>
+              </li>
+              <li>
+                <a href="crf/exp.html?expType=xray" data-exp-type="xray">X线表现</a>
+              </li>
+              <li>
+                <a href="crf/exp.html?expType=mri" data-exp-type="mri">MRI表现</a>
+              </li>
+              <li>
+                <a href="crf/c12.html">C12检验结果</a>
+              </li>
+              <li>
+                <a href="crf/pet-ct.html">pet-ct</a>
+              </li>
+              <li>
+                <a href="crf/vioRange.html">侵犯范围</a>
+              </li>
+              <li>
+                <a href="crf/lymphTrans.html">淋巴结转移</a>
+              </li>
+              <li>
+                <a href="crf/distanceTrans.html">远处转移</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
       <!-- /.sidebar-collapse -->
@@ -171,184 +265,184 @@
       </div>
       <div class="modal-body clearfix">
         <form action="hehe" method="post" id="tumour-form" class="form-horizontal col-xs-12">
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="胃癌"> 胃癌
+              <input type="checkbox" disabled name="tumour" value="胃癌"> 胃癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="十二指肠癌"> 十二指肠癌
+              <input type="checkbox" disabled name="tumour" value="十二指肠癌"> 十二指肠癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="小肠癌"> 小肠癌
+              <input type="checkbox" disabled name="tumour" value="小肠癌"> 小肠癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="结直肠癌"> 结直肠癌
+              <input type="checkbox" disabled name="tumour" value="结直肠癌"> 结直肠癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="甲状腺癌"> 甲状腺癌
+              <input type="checkbox" disabled name="tumour" value="甲状腺癌"> 甲状腺癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="胸膜间皮瘤"> 胸膜间皮瘤
+              <input type="checkbox" disabled name="tumour" value="胸膜间皮瘤"> 胸膜间皮瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="腹膜间皮瘤"> 腹膜间皮瘤
+              <input type="checkbox" disabled name="tumour" value="腹膜间皮瘤"> 腹膜间皮瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="纵膈恶性肿瘤"> 纵膈恶性肿瘤
+              <input type="checkbox" disabled name="tumour" value="纵膈恶性肿瘤"> 纵膈恶性肿瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="宫颈癌"> 宫颈癌
+              <input type="checkbox" disabled name="tumour" value="宫颈癌"> 宫颈癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="卵巢癌"> 卵巢癌
+              <input type="checkbox" disabled name="tumour" value="卵巢癌"> 卵巢癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="膀胱癌"> 膀胱癌
+              <input type="checkbox" disabled name="tumour" value="膀胱癌"> 膀胱癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="肾癌"> 肾癌
+              <input type="checkbox" disabled name="tumour" value="肾癌"> 肾癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="输尿管癌"> 输尿管癌
+              <input type="checkbox" disabled name="tumour" value="输尿管癌"> 输尿管癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="子宫内膜癌"> 子宫内膜癌
+              <input type="checkbox" disabled name="tumour" value="子宫内膜癌"> 子宫内膜癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="胆囊癌"> 胆囊癌
+              <input type="checkbox" disabled name="tumour" value="胆囊癌"> 胆囊癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
               <input type="checkbox" name="tumour" value="前列腺癌"> 前列腺癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="鼻咽癌"> 鼻咽癌
+              <input type="checkbox" disabled name="tumour" value="鼻咽癌"> 鼻咽癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="恶性黑色素瘤"> 恶性黑色素瘤
+              <input type="checkbox" disabled name="tumour" value="恶性黑色素瘤"> 恶性黑色素瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="恶性软组织肿瘤"> 恶性软组织肿瘤
+              <input type="checkbox" disabled name="tumour" value="恶性软组织肿瘤"> 恶性软组织肿瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="肺癌"> 肺癌
+              <input type="checkbox" disabled name="tumour" value="肺癌"> 肺癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="胰腺癌"> 胰腺癌
+              <input type="checkbox" disabled name="tumour" value="胰腺癌"> 胰腺癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="肝癌"> 肝癌
+              <input type="checkbox" disabled name="tumour" value="肝癌"> 肝癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="骨肉瘤"> 骨肉瘤
+              <input type="checkbox" disabled name="tumour" value="骨肉瘤"> 骨肉瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="胶质瘤"> 胶质瘤
+              <input type="checkbox" disabled name="tumour" value="胶质瘤"> 胶质瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="乳腺癌"> 乳腺癌
+              <input type="checkbox" disabled name="tumour" value="乳腺癌"> 乳腺癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="软骨肉瘤"> 软骨肉瘤
+              <input type="checkbox" disabled name="tumour" value="软骨肉瘤"> 软骨肉瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="食管癌"> 食管癌
+              <input type="checkbox" disabled name="tumour" value="食管癌"> 食管癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="鼻窦癌"> 鼻窦癌
+              <input type="checkbox" disabled name="tumour" value="鼻窦癌"> 鼻窦癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="鼻腔癌"> 鼻腔癌
+              <input type="checkbox" disabled name="tumour" value="鼻腔癌"> 鼻腔癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="骨髓瘤"> 骨髓瘤
+              <input type="checkbox" disabled name="tumour" value="骨髓瘤"> 骨髓瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="喉癌"> 喉癌
+              <input type="checkbox" disabled name="tumour" value="喉癌"> 喉癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="口腔癌"> 口腔癌
+              <input type="checkbox" disabled name="tumour" value="口腔癌"> 口腔癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="口咽癌"> 口咽癌
+              <input type="checkbox" disabled name="tumour" value="口咽癌"> 口咽癌
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="淋巴瘤"> 淋巴瘤
+              <input type="checkbox" disabled name="tumour" value="淋巴瘤"> 淋巴瘤
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="腮腺CA"> 腮腺CA
+              <input type="checkbox" disabled name="tumour" value="腮腺CA"> 腮腺CA
             </label>
           </div>
-          <div class="col-sm-4 col-xs-6 mt-one">
+          <div class="col-sm-4 col-xs-6">
             <label>
-              <input type="checkbox" name="tumour" value="舌CA"> 舌CA
+              <input type="checkbox" disabled name="tumour" value="舌CA"> 舌CA
             </label>
           </div>
         </form>
@@ -378,12 +472,8 @@
   </script>
 
   <!-- Metis Menu Plugin JavaScript -->
-  <script src="plugins/metisMenu/metisMenu.min.js">
-  </script>
-  <script type="text/javascript" src="js/jquery.history.js">
-  </script>
-  <script type="text/javascript" src="js/jquery-ui.min.js">
-  </script>
+  <script src="plugins/metisMenu/metisMenu.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <!-- Custom Theme JavaScript -->
   <script src="js/crf.js">
   </script>
